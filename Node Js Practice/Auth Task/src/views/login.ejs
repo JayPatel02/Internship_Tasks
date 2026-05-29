@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="display: flex;justify-content: center;margin: 6vmin auto;">
+        <fieldset style="width: 30%;">
+            <legend>Login</legend>
+
+            <div style="display: flex;flex-direction: column;width: 80%;margin: 2vmin auto;">
+                <label for="email">Email:</label>
+                <span id="spanEM" style="display: none;">Invalid Email / Already Exist.</span>
+                <input type="text" id="email" name="email">
+            </div>
+
+            <div style="display: flex;flex-direction: column;width: 80%;margin: 2vmin auto;">
+                <label for="pass">Password:</label>
+                <small id="spanPass" style="display: none;">Password must be of 8 charcters and must includes one
+                    capital letter , one small letter and on special symbol(@,$,!,%,*,?,&).</small>
+                <input type="password" id="pass" name="password">
+                <small  ><a href="/forgetPassword">Forget Password?</a></small>
+            </div>
+
+            <div style="display: flex;flex-direction: column;width: 80%;margin: 2vmin auto;">
+                <span id="invCreds" style="display: none;color: red;">Invalid Credentials.</span>
+            </div>
+
+            <div style="display: flex;width: 80%;margin: 4vmin auto;justify-content: center;">
+                <input type="checkbox" name="isRemMe" id="rememberMe">
+                <label for="rememberMe">Remember Me</label>
+            </div>
+
+            <div style="display: flex;width: fit-content;margin: 2vmin auto;gap: 4vmin;">
+                <button type="button" id="regBtn" onclick="handleLogin()">Login</button>
+                <a href="/register" style="font-size: small;">New User.Want to register yourself?</a>
+            </div>
+
+        </fieldset>
+    </div>
+    <script src="/JS/validation.js"></script>
+    <script>
+        async function handleLogin() {
+            const isRemMe = document.getElementById("rememberMe").checked
+            if (valEmail() && validatePass() && checkEmail()) {
+                const res = await fetch("/login", {
+                    method: "post",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ email: email.value, currpass: currpassword.value , isRemMe : isRemMe})
+                })
+                if (res.status == 200) {
+                    document.getElementById("invCreds").style.display = "none"
+                    window.location.href = "/"
+                } else if(res.status == 400){
+                    document.getElementById("invCreds").style.display = "block"
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

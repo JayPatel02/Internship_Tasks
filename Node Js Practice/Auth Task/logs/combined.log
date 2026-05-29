@@ -1,0 +1,689 @@
+{"level":"info","message":"GET /login 200 2908 4.153 ms","timestamp":"2026-04-22 14:01:04"}
+{"level":"info","message":"GET /login 304 - 1.444 ms","timestamp":"2026-04-22 14:01:04"}
+{"level":"info","message":"POST /checkEmail 200 26 18.653 ms","timestamp":"2026-04-22 14:01:11"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22 14:01:12"}
+{"level":"info","message":"POST /login 200 25 51.412 ms","timestamp":"2026-04-22 14:01:12"}
+{"level":"info","message":"GET / 304 - 1.341 ms","timestamp":"2026-04-22 14:01:12"}
+{"level":"info","message":"GET /login 200 2908  7.749 ms","timestamp":"2026-04-22 14:34:51"}
+{"level":"info","message":"POST /checkEmail 200 26  18.504 ms","timestamp":"2026-04-22 14:35:01"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22 14:35:01"}
+{"level":"info","message":"POST /login 200 25  51.770 ms","timestamp":"2026-04-22 14:35:01"}
+{"level":"info","message":"GET / 304 -  1.901 ms","timestamp":"2026-04-22 14:35:01"}
+{"level":"info","message":"GET /login 200 2908  1.112 ms","timestamp":"2026-04-22 14:35:09"}
+{"level":"info","message":"GET /forgetPassword 200 2126  0.904 ms","timestamp":"2026-04-22 14:35:12"}
+{"level":"info","message":"POST /checkEmail 200 26  1.434 ms","timestamp":"2026-04-22 14:35:19"}
+{"action":"FORGET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Reset Password Link Generated","timestamp":"2026-04-22 14:35:19"}
+{"level":"info","message":"POST /forgetPassword 200 90  0.501 ms","timestamp":"2026-04-22 14:35:19"}
+{"level":"info","message":"GET /forgetPassword/41a4629e9e007517557d12b09c3e3115c9e57f5a4df10a2df7cf3f3f36a4ba42?email=test@gmail.com 200 2760  0.732 ms","timestamp":"2026-04-22 14:35:19"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Opened Reset Password Page","timestamp":"2026-04-22 14:36:03"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Password Updated Successfully","timestamp":"2026-04-22 14:36:03"}
+{"level":"info","message":"POST /resetPassword 200 30  89.218 ms","timestamp":"2026-04-22 14:36:03"}
+{"level":"info","message":"GET /login 304 -  0.631 ms","timestamp":"2026-04-22 14:36:03"}
+{"level":"info","message":"GET /register 200 11540  3.313 ms","timestamp":"2026-04-22 14:36:26"}
+{"level":"info","message":"GET /forgetPassword 200 2126  0.850 ms","timestamp":"2026-04-22 14:36:31"}
+{"level":"info","message":"POST /checkEmail 200 26  18.803 ms","timestamp":"2026-04-22 14:42:03"}
+{"action":"ERR_LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Failed","timestamp":"2026-04-22 14:42:03"}
+{"level":"info","message":"POST /login 400 28  51.910 ms","timestamp":"2026-04-22 14:42:03"}
+{"level":"info","message":"GET /forgetPassword 304 -  2.964 ms","timestamp":"2026-04-22 14:42:10"}
+{"level":"info","message":"POST /checkEmail 200 26  16.907 ms","timestamp":"2026-04-22 14:44:56"}
+{"action":"FORGET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Reset Password Link Generated","timestamp":"2026-04-22 14:44:56"}
+{"level":"info","message":"POST /forgetPassword 200 90  0.814 ms","timestamp":"2026-04-22 14:44:56"}
+{"level":"info","message":"GET /forgetPassword/7379376c5af4c4d0133dbbc54c8e38ee06fdf66257ad276a21dc5c78ef981090?email=admin@gmail.com 200 2761  6.225 ms","timestamp":"2026-04-22 14:44:56"}
+{"level":"info","message":"POST /checkEmail 200 26  2.242 ms","timestamp":"2026-04-22 14:45:15"}
+{"action":"ERR_LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Failed","timestamp":"2026-04-22 14:45:15"}
+{"level":"info","message":"POST /login 400 28  43.686 ms","timestamp":"2026-04-22 14:45:15"}
+{"level":"info","message":"POST /checkEmail 200 26  1.863 ms","timestamp":"2026-04-22 14:45:16"}
+{"action":"ERR_LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Failed","timestamp":"2026-04-22 14:45:16"}
+{"level":"info","message":"POST /login 400 28  42.350 ms","timestamp":"2026-04-22 14:45:16"}
+{"level":"info","message":"GET /login 200 2908  0.914 ms","timestamp":"2026-04-22 14:45:17"}
+{"level":"info","message":"GET /login 304 -  0.884 ms","timestamp":"2026-04-22 14:45:18"}
+{"level":"info","message":"GET /login 304 -  0.689 ms","timestamp":"2026-04-22 14:45:18"}
+{"level":"info","message":"GET /login 304 -  0.731 ms","timestamp":"2026-04-22 14:45:18"}
+{"level":"info","message":"GET /login 304 -  1.585 ms","timestamp":"2026-04-22 14:45:18"}
+{"level":"info","message":"GET /login 304 -  0.627 ms","timestamp":"2026-04-22 14:45:18"}
+{"level":"info","message":"POST /checkEmail 200 26  1.888 ms","timestamp":"2026-04-22 14:45:28"}
+{"action":"ERR_LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Failed","timestamp":"2026-04-22 14:45:28"}
+{"level":"info","message":"POST /login 400 28  42.589 ms","timestamp":"2026-04-22 14:45:28"}
+{"level":"info","message":"GET /forgetPassword 200 2126  0.796 ms","timestamp":"2026-04-22 14:45:30"}
+{"level":"info","message":"POST /checkEmail 200 26  1.901 ms","timestamp":"2026-04-22 14:45:40"}
+{"action":"FORGET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Reset Password Link Generated","timestamp":"2026-04-22 14:45:40"}
+{"level":"info","message":"POST /forgetPassword 200 90  0.419 ms","timestamp":"2026-04-22 14:45:40"}
+{"level":"info","message":"GET /forgetPassword/49f04b8be256989bc8bceaa0186bb1569eb419e85f06ae21f10613ec281e683b?email=admin@gmail.com 200 2761  0.704 ms","timestamp":"2026-04-22 14:45:40"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Opened Reset Password Page","timestamp":"2026-04-22 14:45:55"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Password Updated Successfully","timestamp":"2026-04-22 14:45:55"}
+{"level":"info","message":"POST /resetPassword 200 30  91.653 ms","timestamp":"2026-04-22 14:45:55"}
+{"level":"info","message":"GET /login 200 2908  0.608 ms","timestamp":"2026-04-22 14:45:55"}
+{"level":"info","message":"GET /forgetPassword 200 2126  1.175 ms","timestamp":"2026-04-22 14:46:06"}
+{"level":"info","message":"POST /checkEmail 200 26  1.461 ms","timestamp":"2026-04-22 14:46:17"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22 14:46:17"}
+{"level":"info","message":"POST /login 200 25  43.971 ms","timestamp":"2026-04-22 14:46:17"}
+{"level":"info","message":"GET / 302 35  1.862 ms","timestamp":"2026-04-22 14:46:17"}
+{"level":"info","message":"GET /admin 304 -  1.076 ms","timestamp":"2026-04-22 14:46:17"}
+{"level":"info","message":"GET / 302 35  2.643 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"GET /login 200 2908  2.615 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"POST /checkEmail 200 26  19.253 ms","timestamp":"2026-04-22"}
+{"action":"ERR_LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Failed","timestamp":"2026-04-22"}
+{"level":"info","message":"POST /login 400 28  50.056 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"POST /checkEmail 200 26  1.527 ms","timestamp":"2026-04-22"}
+{"action":"ERR_LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Failed","timestamp":"2026-04-22"}
+{"level":"info","message":"POST /login 400 28  42.743 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"POST /checkEmail 200 26  1.773 ms","timestamp":"2026-04-22"}
+{"action":"ERR_LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Failed","timestamp":"2026-04-22"}
+{"level":"info","message":"POST /login 400 28  42.875 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"GET /forgetPassword 200 2126  0.819 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"POST /checkEmail 200 26  0.917 ms","timestamp":"2026-04-22"}
+{"action":"FORGET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Reset Password Link Generated","timestamp":"2026-04-22"}
+{"level":"info","message":"POST /forgetPassword 200 90  0.756 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"GET /forgetPassword/99e9467c1e83fd1dfd8f0e4815abfdb684ecfbf8fd46ce6d0887de0bd18b0152?email=test@gmail.com 200 2760  0.983 ms","timestamp":"2026-04-22"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Opened Reset Password Page","timestamp":"2026-04-22"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Password Updated Successfully","timestamp":"2026-04-22"}
+{"level":"info","message":"POST /resetPassword 200 30  88.523 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"GET /login 200 2908  0.707 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"POST /checkEmail 200 26  1.061 ms","timestamp":"2026-04-22"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22"}
+{"level":"info","message":"POST /login 200 25  43.874 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"GET / 200 219  1.278 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"GET /admin/showUsers 304 -  16.045 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"GET /admin/logs 500 50  2.900 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"GET /admin/logs 200 10759  8.294 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"GET /admin/logs 304 -  4.633 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"GET /admin/logs 304 -  5.175 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"GET /admin/logs 200 10441  4.827 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"GET /admin/logs 200 9148  2.098 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"GET /admin/showUsers 304 -  13.996 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"GET /admin/logs 304 -  0.965 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"GET /admin/showUsers 304 -  1.624 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"GET /admin 304 -  0.774 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"GET /admin/showUsers 304 -  1.418 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"GET /admin/logs 304 -  0.768 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"GET /admin 304 -  0.780 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"GET /admin/showUsers 304 -  1.471 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"GET /admin/logs 304 -  0.771 ms","timestamp":"2026-04-22"}
+{"level":"info","message":"GET /login 200 2908  4.178 ms","timestamp":"2026-04-22T10:03:13.365Z"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T10:03:22.736Z"}
+{"level":"info","message":"POST /login 200 25  51.429 ms","timestamp":"2026-04-22T10:03:22.737Z"}
+{"level":"info","message":"POST /checkEmail 200 26  60.195 ms","timestamp":"2026-04-22T10:03:22.737Z"}
+{"level":"info","message":"GET / 200 219  1.249 ms","timestamp":"2026-04-22T10:03:22.742Z"}
+{"level":"info","message":"GET /login 200 2908  0.906 ms","timestamp":"2026-04-22T10:04:01.377Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.858 ms","timestamp":"2026-04-22T10:04:09.575Z"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T10:04:09.618Z"}
+{"level":"info","message":"POST /login 200 25  44.243 ms","timestamp":"2026-04-22T10:04:09.618Z"}
+{"level":"info","message":"GET / 200 219  0.822 ms","timestamp":"2026-04-22T10:04:09.623Z"}
+{"level":"info","message":"GET /admin/logs 500 50  3.236 ms","timestamp":"2026-04-22T10:04:14.242Z"}
+{"level":"info","message":"GET /admin/logs 200 5786  4.990 ms","timestamp":"2026-04-22T10:04:46.039Z"}
+{"level":"info","message":"GET /admin/logs 304 -  4.692 ms","timestamp":"2026-04-22T10:05:14.238Z"}
+{"level":"info","message":"GET /admin/logs 200 5273  4.679 ms","timestamp":"2026-04-22T10:09:08.901Z"}
+{"level":"info","message":"GET /admin/logs 304 -  5.037 ms","timestamp":"2026-04-22T10:10:21.255Z"}
+{"level":"info","message":"GET /admin/logs 304 -  1.410 ms","timestamp":"2026-04-22T10:10:22.383Z"}
+{"level":"info","message":"GET /admin/logs 304 -  1.069 ms","timestamp":"2026-04-22T10:10:22.556Z"}
+{"level":"info","message":"GET /admin/logs 304 -  1.023 ms","timestamp":"2026-04-22T10:10:22.730Z"}
+{"level":"info","message":"GET /admin/logs 304 -  1.024 ms","timestamp":"2026-04-22T10:11:41.803Z"}
+{"level":"info","message":"GET /admin/logs 304 -  0.967 ms","timestamp":"2026-04-22T10:11:44.173Z"}
+{"level":"info","message":"GET /admin/logs 304 -  0.926 ms","timestamp":"2026-04-22T10:11:44.347Z"}
+{"level":"info","message":"GET /admin/logs 304 -  0.726 ms","timestamp":"2026-04-22T10:11:44.514Z"}
+{"level":"info","message":"GET /admin/logs 500 2370  3.222 ms","timestamp":"2026-04-22T10:11:49.070Z"}
+{"level":"info","message":"GET /admin/logs 500 2370  1.312 ms","timestamp":"2026-04-22T10:11:49.268Z"}
+{"level":"info","message":"GET /admin/logs 500 2370  2.383 ms","timestamp":"2026-04-22T10:11:49.515Z"}
+{"level":"info","message":"GET /admin/logs 200 5273  0.778 ms","timestamp":"2026-04-22T10:11:53.664Z"}
+{"level":"info","message":"GET /admin/logs 304 -  0.997 ms","timestamp":"2026-04-22T10:11:53.849Z"}
+{"level":"info","message":"GET /admin/logs 304 -  1.032 ms","timestamp":"2026-04-22T10:11:54.037Z"}
+{"level":"info","message":"GET /admin/logs 304 -  0.927 ms","timestamp":"2026-04-22T10:11:54.223Z"}
+{"level":"info","message":"GET /admin/logs 304 -  0.856 ms","timestamp":"2026-04-22T10:11:54.379Z"}
+{"level":"info","message":"GET /admin/logs 304 -  0.847 ms","timestamp":"2026-04-22T10:11:54.530Z"}
+{"level":"info","message":"GET /admin/logs 304 -  0.645 ms","timestamp":"2026-04-22T10:11:54.684Z"}
+{"level":"info","message":"GET /admin/logs 200 5270  14.221 ms","timestamp":"2026-04-22T10:26:56.612Z"}
+{"level":"info","message":"GET / 302 35  3.821 ms","timestamp":"2026-04-22T10:33:51.836Z"}
+{"level":"info","message":"GET /login 200 2908  0.909 ms","timestamp":"2026-04-22T10:33:51.838Z"}
+{"level":"info","message":"GET /register 200 10191  6.961 ms","timestamp":"2026-04-22T10:33:54.625Z"}
+{"level":"info","message":"POST /checkEmail 404 30  16.457 ms","timestamp":"2026-04-22T10:34:42.366Z"}
+{"action":"REGISTER","ip":"::ffff:192.168.22.73","level":"info","message":"New User Registered","timestamp":"2026-04-22T10:34:42.415Z"}
+{"level":"info","message":"POST /register 200 29  44.377 ms","timestamp":"2026-04-22T10:34:42.415Z"}
+{"level":"info","message":"GET /login 304 -  0.568 ms","timestamp":"2026-04-22T10:34:42.430Z"}
+{"level":"info","message":"GET /admin/logs 200 6020  1.028 ms","timestamp":"2026-04-22T10:34:44.794Z"}
+{"level":"info","message":"GET /admin/logs 200 5930  0.937 ms","timestamp":"2026-04-22T10:35:07.993Z"}
+{"level":"info","message":"POST /checkEmail 200 26  4.894 ms","timestamp":"2026-04-22T10:35:11.712Z"}
+{"action":"LOGIN","ip":"::ffff:192.168.22.73","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T10:35:11.756Z"}
+{"level":"info","message":"POST /login 200 25  46.211 ms","timestamp":"2026-04-22T10:35:11.756Z"}
+{"level":"info","message":"GET / 302 35  0.582 ms","timestamp":"2026-04-22T10:35:11.764Z"}
+{"level":"info","message":"GET /login 200 2908  0.721 ms","timestamp":"2026-04-22T10:35:11.767Z"}
+{"level":"info","message":"GET /admin/logs 200 6588  0.834 ms","timestamp":"2026-04-22T10:35:16.106Z"}
+{"level":"info","message":"POST /checkEmail 200 26  4.789 ms","timestamp":"2026-04-22T10:35:36.185Z"}
+{"action":"LOGIN","ip":"::ffff:192.168.22.73","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T10:35:36.226Z"}
+{"level":"info","message":"POST /login 200 25  42.588 ms","timestamp":"2026-04-22T10:35:36.226Z"}
+{"level":"info","message":"GET / 302 35  0.612 ms","timestamp":"2026-04-22T10:35:36.235Z"}
+{"level":"info","message":"GET /login 200 2908  0.590 ms","timestamp":"2026-04-22T10:35:36.238Z"}
+{"level":"info","message":"GET /admin/logs 200 7246  12.972 ms","timestamp":"2026-04-22T10:35:55.253Z"}
+{"level":"info","message":"GET /login 304 -  1.660 ms","timestamp":"2026-04-22T10:35:56.638Z"}
+{"level":"info","message":"POST /checkEmail 200 26  18.804 ms","timestamp":"2026-04-22T10:36:15.961Z"}
+{"action":"LOGIN","ip":"::ffff:192.168.22.73","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T10:36:16.004Z"}
+{"level":"info","message":"POST /login 200 25  51.490 ms","timestamp":"2026-04-22T10:36:16.005Z"}
+{"level":"info","message":"GET / 302 35  1.003 ms","timestamp":"2026-04-22T10:36:16.015Z"}
+{"level":"info","message":"GET /login 200 2908  0.879 ms","timestamp":"2026-04-22T10:36:16.021Z"}
+{"level":"info","message":"GET /admin/logs 200 7904  1.185 ms","timestamp":"2026-04-22T10:36:19.910Z"}
+{"level":"info","message":"GET /home 404 143  1.254 ms","timestamp":"2026-04-22T10:36:33.275Z"}
+{"level":"info","message":"GET / 302 35  2.739 ms","timestamp":"2026-04-22T10:36:37.984Z"}
+{"level":"info","message":"GET /login 304 -  0.658 ms","timestamp":"2026-04-22T10:36:37.988Z"}
+{"level":"info","message":"GET /login 200 2908  1.242 ms","timestamp":"2026-04-22T10:36:50.320Z"}
+{"level":"info","message":"GET /login 200 2908  0.604 ms","timestamp":"2026-04-22T10:36:56.856Z"}
+{"level":"info","message":"POST /checkEmail 200 26  2.821 ms","timestamp":"2026-04-22T10:37:33.744Z"}
+{"action":"LOGIN","ip":"::ffff:192.168.22.73","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T10:37:33.786Z"}
+{"level":"info","message":"POST /login 200 25  42.469 ms","timestamp":"2026-04-22T10:37:33.786Z"}
+{"level":"info","message":"GET / 302 35  0.464 ms","timestamp":"2026-04-22T10:37:33.802Z"}
+{"level":"info","message":"GET /login 200 2908  0.365 ms","timestamp":"2026-04-22T10:37:33.805Z"}
+{"level":"info","message":"GET /admin/logs 200 8562  0.968 ms","timestamp":"2026-04-22T10:37:44.858Z"}
+{"level":"info","message":"GET / 302 35  0.450 ms","timestamp":"2026-04-22T10:38:13.887Z"}
+{"level":"info","message":"GET /login 200 2908  0.566 ms","timestamp":"2026-04-22T10:38:13.892Z"}
+{"level":"info","message":"POST /checkEmail 200 26  2.434 ms","timestamp":"2026-04-22T10:38:37.726Z"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T10:38:37.769Z"}
+{"level":"info","message":"POST /login 200 25  44.831 ms","timestamp":"2026-04-22T10:38:37.769Z"}
+{"level":"info","message":"GET / 200 219  1.222 ms","timestamp":"2026-04-22T10:38:37.778Z"}
+{"level":"info","message":"GET /login 200 2908  0.695 ms","timestamp":"2026-04-22T10:38:43.611Z"}
+{"level":"info","message":"GET /login 200 2908  1.706 ms","timestamp":"2026-04-22T10:38:43.833Z"}
+{"level":"info","message":"GET /login 200 2908  1.631 ms","timestamp":"2026-04-22T10:38:44.053Z"}
+{"level":"info","message":"GET /login 200 2908  1.710 ms","timestamp":"2026-04-22T10:38:44.248Z"}
+{"level":"info","message":"GET /login 200 2908  1.927 ms","timestamp":"2026-04-22T10:38:44.437Z"}
+{"level":"info","message":"GET /login 200 2908  1.868 ms","timestamp":"2026-04-22T10:38:44.621Z"}
+{"level":"info","message":"GET /admin/logs 200 9216  0.731 ms","timestamp":"2026-04-22T10:38:48.089Z"}
+{"level":"info","message":"POST /checkEmail 200 26  3.204 ms","timestamp":"2026-04-22T10:38:52.202Z"}
+{"action":"LOGIN","ip":"::ffff:192.168.22.73","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T10:38:52.244Z"}
+{"level":"info","message":"POST /login 200 25  43.226 ms","timestamp":"2026-04-22T10:38:52.244Z"}
+{"level":"info","message":"GET / 302 35  0.247 ms","timestamp":"2026-04-22T10:38:52.260Z"}
+{"level":"info","message":"GET /login 200 2908  0.290 ms","timestamp":"2026-04-22T10:38:52.267Z"}
+{"level":"info","message":"GET /login 304 -  1.289 ms","timestamp":"2026-04-22T10:39:46.397Z"}
+{"level":"info","message":"GET / 200 219  0.802 ms","timestamp":"2026-04-22T10:39:50.040Z"}
+{"level":"info","message":"GET / 302 35  1.533 ms","timestamp":"2026-04-22T10:39:53.775Z"}
+{"level":"info","message":"GET /login 200 2908  0.863 ms","timestamp":"2026-04-22T10:39:53.778Z"}
+{"level":"info","message":"GET /login 200 2908  2.022 ms","timestamp":"2026-04-22T10:39:58.441Z"}
+{"level":"info","message":"GET /login 200 2908  2.310 ms","timestamp":"2026-04-22T10:39:58.962Z"}
+{"level":"info","message":"GET /register 200 9739  4.970 ms","timestamp":"2026-04-22T10:40:01.726Z"}
+{"level":"info","message":"GET / 302 35  0.571 ms","timestamp":"2026-04-22T10:42:33.438Z"}
+{"level":"info","message":"GET /login 200 2908  0.630 ms","timestamp":"2026-04-22T10:42:33.442Z"}
+{"level":"info","message":"GET /login 304 -  0.867 ms","timestamp":"2026-04-22T10:42:35.722Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.256 ms","timestamp":"2026-04-22T10:42:39.570Z"}
+{"action":"LOGIN","ip":"::ffff:192.168.22.73","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T10:42:39.613Z"}
+{"level":"info","message":"POST /login 200 25  44.237 ms","timestamp":"2026-04-22T10:42:39.613Z"}
+{"level":"info","message":"GET / 302 35  0.457 ms","timestamp":"2026-04-22T10:42:39.619Z"}
+{"level":"info","message":"GET /login 200 2908  0.331 ms","timestamp":"2026-04-22T10:42:39.622Z"}
+{"level":"info","message":"GET /register 200 12532  4.285 ms","timestamp":"2026-04-22T10:42:41.028Z"}
+{"level":"info","message":"GET /admin/logs 200 10532  0.793 ms","timestamp":"2026-04-22T10:42:52.609Z"}
+{"level":"info","message":"GET /register 200 12728  2.410 ms","timestamp":"2026-04-22T10:42:53.897Z"}
+{"level":"info","message":"GET /login 304 -  0.845 ms","timestamp":"2026-04-22T10:43:03.619Z"}
+{"level":"info","message":"GET /login 304 -  3.027 ms","timestamp":"2026-04-22T10:43:03.811Z"}
+{"level":"info","message":"GET /login 304 -  1.461 ms","timestamp":"2026-04-22T10:43:04.186Z"}
+{"level":"info","message":"GET /login 200 2908  1.449 ms","timestamp":"2026-04-22T10:43:50.140Z"}
+{"level":"info","message":"POST /checkEmail 200 26  0.973 ms","timestamp":"2026-04-22T10:44:01.795Z"}
+{"action":"LOGIN","ip":"::ffff:192.168.22.73","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T10:44:01.837Z"}
+{"level":"info","message":"POST /login 200 25  42.950 ms","timestamp":"2026-04-22T10:44:01.837Z"}
+{"level":"info","message":"GET / 302 35  0.485 ms","timestamp":"2026-04-22T10:44:01.848Z"}
+{"level":"info","message":"GET /login 200 2908  0.355 ms","timestamp":"2026-04-22T10:44:01.850Z"}
+{"level":"info","message":"GET /admin/logs 200 11190  0.870 ms","timestamp":"2026-04-22T10:44:03.774Z"}
+{"level":"info","message":"GET /register 200 12039  2.879 ms","timestamp":"2026-04-22T10:44:04.952Z"}
+{"level":"info","message":"GET /register 200 11316  2.624 ms","timestamp":"2026-04-22T10:44:05.591Z"}
+{"level":"info","message":"GET /admin/logs 304 -  0.736 ms","timestamp":"2026-04-22T10:44:08.899Z"}
+{"level":"info","message":"POST /checkEmail 404 30  3.481 ms","timestamp":"2026-04-22T10:44:13.943Z"}
+{"level":"info","message":"POST /register 400 30  0.605 ms","timestamp":"2026-04-22T10:44:13.947Z"}
+{"level":"info","message":"GET /register 200 12578  1.272 ms","timestamp":"2026-04-22T10:44:13.956Z"}
+{"level":"info","message":"GET /login 304 -  2.373 ms","timestamp":"2026-04-22T10:44:24.995Z"}
+{"level":"info","message":"POST /checkEmail 404 30  3.355 ms","timestamp":"2026-04-22T10:44:27.863Z"}
+{"action":"REGISTER","ip":"::ffff:192.168.22.71","level":"info","message":"New User Registered","timestamp":"2026-04-22T10:44:27.914Z"}
+{"level":"info","message":"POST /register 200 29  45.908 ms","timestamp":"2026-04-22T10:44:27.914Z"}
+{"level":"info","message":"GET /login 304 -  0.603 ms","timestamp":"2026-04-22T10:44:27.929Z"}
+{"level":"info","message":"POST /checkEmail 200 26  4.304 ms","timestamp":"2026-04-22T10:44:30.279Z"}
+{"action":"LOGIN","ip":"::ffff:192.168.22.73","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T10:44:30.320Z"}
+{"level":"info","message":"POST /login 200 25  42.562 ms","timestamp":"2026-04-22T10:44:30.321Z"}
+{"level":"info","message":"GET / 302 35  0.220 ms","timestamp":"2026-04-22T10:44:30.340Z"}
+{"level":"info","message":"GET /login 200 2908  0.293 ms","timestamp":"2026-04-22T10:44:30.343Z"}
+{"level":"info","message":"GET /admin/logs 200 12506  0.705 ms","timestamp":"2026-04-22T10:44:38.159Z"}
+{"level":"info","message":"POST /checkEmail 200 26  4.535 ms","timestamp":"2026-04-22T10:44:53.841Z"}
+{"action":"LOGIN","ip":"::ffff:192.168.22.71","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T10:44:53.882Z"}
+{"level":"info","message":"POST /login 200 25  42.493 ms","timestamp":"2026-04-22T10:44:53.882Z"}
+{"level":"info","message":"GET / 302 35  0.570 ms","timestamp":"2026-04-22T10:44:53.917Z"}
+{"level":"info","message":"GET /login 200 2908  0.717 ms","timestamp":"2026-04-22T10:44:53.921Z"}
+{"level":"info","message":"GET /login 304 -  1.991 ms","timestamp":"2026-04-22T10:45:09.229Z"}
+{"level":"info","message":"GET /login 304 -  0.670 ms","timestamp":"2026-04-22T10:45:09.523Z"}
+{"level":"info","message":"GET /login 304 -  1.462 ms","timestamp":"2026-04-22T10:45:09.742Z"}
+{"action":"LOGIN","ip":"::ffff:192.168.22.71","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T10:45:38.302Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.255 ms","timestamp":"2026-04-22T10:45:38.302Z"}
+{"level":"info","message":"POST /login 200 25  43.859 ms","timestamp":"2026-04-22T10:45:38.303Z"}
+{"level":"info","message":"GET / 302 35  1.332 ms","timestamp":"2026-04-22T10:45:38.325Z"}
+{"level":"info","message":"GET /login 200 2908  0.649 ms","timestamp":"2026-04-22T10:45:38.328Z"}
+{"level":"info","message":"GET /admin/logs 200 13822  0.700 ms","timestamp":"2026-04-22T10:45:39.641Z"}
+{"level":"info","message":"GET /login 304 -  2.392 ms","timestamp":"2026-04-22T10:45:41.612Z"}
+{"level":"info","message":"GET /login 304 -  1.910 ms","timestamp":"2026-04-22T10:45:41.676Z"}
+{"level":"info","message":"GET /login 304 -  2.767 ms","timestamp":"2026-04-22T10:45:42.033Z"}
+{"level":"info","message":"GET /login 304 -  2.300 ms","timestamp":"2026-04-22T10:45:42.247Z"}
+{"level":"info","message":"GET /login 200 2908  1.706 ms","timestamp":"2026-04-22T10:45:43.418Z"}
+{"level":"info","message":"POST /checkEmail 200 26  4.064 ms","timestamp":"2026-04-22T10:45:46.326Z"}
+{"action":"LOGIN","ip":"::ffff:192.168.22.73","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T10:45:46.368Z"}
+{"level":"info","message":"POST /login 200 25  44.073 ms","timestamp":"2026-04-22T10:45:46.368Z"}
+{"level":"info","message":"GET / 302 35  0.455 ms","timestamp":"2026-04-22T10:45:46.389Z"}
+{"level":"info","message":"GET /login 200 2908  0.307 ms","timestamp":"2026-04-22T10:45:46.393Z"}
+{"action":"LOGIN","ip":"::ffff:192.168.22.71","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T10:45:53.801Z"}
+{"level":"info","message":"POST /checkEmail 200 26  3.159 ms","timestamp":"2026-04-22T10:45:53.801Z"}
+{"level":"info","message":"POST /login 200 25  43.640 ms","timestamp":"2026-04-22T10:45:53.801Z"}
+{"level":"info","message":"GET / 302 35  0.552 ms","timestamp":"2026-04-22T10:45:53.821Z"}
+{"level":"info","message":"GET /login 200 2908  0.354 ms","timestamp":"2026-04-22T10:45:53.824Z"}
+{"level":"info","message":"GET /admin/logs 200 15138  1.001 ms","timestamp":"2026-04-22T10:46:00.290Z"}
+{"level":"info","message":"GET /admin/logs 304 -  0.808 ms","timestamp":"2026-04-22T10:46:00.721Z"}
+{"level":"info","message":"GET /admin/logs 304 -  0.774 ms","timestamp":"2026-04-22T10:46:01.004Z"}
+{"level":"info","message":"GET /admin/logs 304 -  0.745 ms","timestamp":"2026-04-22T10:46:01.213Z"}
+{"level":"info","message":"GET /login 200 2908  4.728 ms","timestamp":"2026-04-22T10:47:15.820Z"}
+{"level":"info","message":"GET /login 304 -  2.376 ms","timestamp":"2026-04-22T10:47:16.886Z"}
+{"level":"info","message":"GET /login 304 -  2.927 ms","timestamp":"2026-04-22T10:47:17.249Z"}
+{"level":"info","message":"POST /checkEmail 200 26  17.085 ms","timestamp":"2026-04-22T10:47:18.172Z"}
+{"action":"LOGIN","ip":"::ffff:192.168.22.73","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T10:47:18.215Z"}
+{"level":"info","message":"POST /login 200 25  49.849 ms","timestamp":"2026-04-22T10:47:18.216Z"}
+{"level":"info","message":"GET / 200 219  1.350 ms","timestamp":"2026-04-22T10:47:18.234Z"}
+{"level":"info","message":"POST /checkEmail 200 26  3.004 ms","timestamp":"2026-04-22T10:47:25.368Z"}
+{"action":"LOGIN","ip":"::ffff:192.168.22.71","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T10:47:25.410Z"}
+{"level":"info","message":"POST /login 200 25  43.214 ms","timestamp":"2026-04-22T10:47:25.410Z"}
+{"level":"info","message":"GET / 200 219  1.037 ms","timestamp":"2026-04-22T10:47:25.429Z"}
+{"level":"info","message":"GET /admin/logs 200 16454  8.851 ms","timestamp":"2026-04-22T10:47:29.471Z"}
+{"level":"info","message":"GET / 302 35  3.709 ms","timestamp":"2026-04-22T10:47:53.075Z"}
+{"level":"info","message":"GET /login 200 2908  0.867 ms","timestamp":"2026-04-22T10:47:53.078Z"}
+{"level":"info","message":"GET / 302 35  0.621 ms","timestamp":"2026-04-22T11:14:27.634Z"}
+{"level":"info","message":"GET /login 304 -  2.501 ms","timestamp":"2026-04-22T11:14:27.641Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.132 ms","timestamp":"2026-04-22T11:15:16.097Z"}
+{"action":"ERR_LOGIN","ip":"::ffff:192.168.22.71","level":"info","message":"User Login Failed","timestamp":"2026-04-22T11:15:16.140Z"}
+{"level":"info","message":"POST /login 400 28  44.049 ms","timestamp":"2026-04-22T11:15:16.140Z"}
+{"level":"info","message":"POST /checkEmail 200 26  0.912 ms","timestamp":"2026-04-22T11:15:27.336Z"}
+{"action":"ERR_LOGIN","ip":"::ffff:192.168.22.71","level":"info","message":"User Login Failed","timestamp":"2026-04-22T11:15:27.379Z"}
+{"level":"info","message":"POST /login 400 28  41.975 ms","timestamp":"2026-04-22T11:15:27.379Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.106 ms","timestamp":"2026-04-22T11:15:27.940Z"}
+{"action":"ERR_LOGIN","ip":"::ffff:192.168.22.71","level":"info","message":"User Login Failed","timestamp":"2026-04-22T11:15:27.983Z"}
+{"level":"info","message":"POST /login 400 28  43.694 ms","timestamp":"2026-04-22T11:15:27.983Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.009 ms","timestamp":"2026-04-22T11:15:28.135Z"}
+{"action":"ERR_LOGIN","ip":"::ffff:192.168.22.71","level":"info","message":"User Login Failed","timestamp":"2026-04-22T11:15:28.179Z"}
+{"level":"info","message":"POST /login 400 28  45.197 ms","timestamp":"2026-04-22T11:15:28.180Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.037 ms","timestamp":"2026-04-22T11:15:28.271Z"}
+{"action":"ERR_LOGIN","ip":"::ffff:192.168.22.71","level":"info","message":"User Login Failed","timestamp":"2026-04-22T11:15:28.315Z"}
+{"level":"info","message":"POST /login 400 28  44.564 ms","timestamp":"2026-04-22T11:15:28.315Z"}
+{"level":"info","message":"GET /admin/logs 200 19739  1.214 ms","timestamp":"2026-04-22T11:15:38.266Z"}
+{"level":"info","message":"GET /forgetPassword 200 2126  0.871 ms","timestamp":"2026-04-22T11:15:42.082Z"}
+{"level":"info","message":"POST /checkEmail 200 26  3.031 ms","timestamp":"2026-04-22T11:15:47.452Z"}
+{"action":"FORGET_PASSWORD","ip":"::ffff:192.168.22.71","level":"info","message":"Reset Password Link Generated","timestamp":"2026-04-22T11:15:47.456Z"}
+{"level":"info","message":"POST /forgetPassword 200 90  0.840 ms","timestamp":"2026-04-22T11:15:47.457Z"}
+{"level":"info","message":"GET /forgetPassword/002fa7fa1bf431fbfae4df4e57ef46df62920ee9160d37cc1571a1157d712c69?email=admin@gmail.com 200 2761  1.723 ms","timestamp":"2026-04-22T11:15:47.473Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:192.168.22.71","level":"info","message":"Opened Reset Password Page","timestamp":"2026-04-22T11:15:54.955Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:192.168.22.71","level":"info","message":"Password Updated Successfully","timestamp":"2026-04-22T11:15:55.043Z"}
+{"level":"info","message":"POST /resetPassword 200 30  90.065 ms","timestamp":"2026-04-22T11:15:55.043Z"}
+{"level":"info","message":"GET /login 200 2908  0.479 ms","timestamp":"2026-04-22T11:15:55.054Z"}
+{"level":"info","message":"GET /admin/logs 200 21759  0.899 ms","timestamp":"2026-04-22T11:15:59.487Z"}
+{"level":"info","message":"POST /checkEmail 200 26  2.895 ms","timestamp":"2026-04-22T11:16:08.012Z"}
+{"action":"LOGIN","ip":"::ffff:192.168.22.71","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T11:16:08.054Z"}
+{"level":"info","message":"POST /login 200 25  43.332 ms","timestamp":"2026-04-22T11:16:08.054Z"}
+{"level":"info","message":"GET / 302 35  0.475 ms","timestamp":"2026-04-22T11:16:08.090Z"}
+{"level":"info","message":"GET /admin 200 1498  0.880 ms","timestamp":"2026-04-22T11:16:08.101Z"}
+{"level":"info","message":"GET /admin/showUsers 200 8741  7.385 ms","timestamp":"2026-04-22T11:16:09.924Z"}
+{"level":"info","message":"GET /admin/showUsers 200 8741  1.327 ms","timestamp":"2026-04-22T11:16:39.961Z"}
+{"level":"info","message":"GET /admin/logs 200 22417  0.867 ms","timestamp":"2026-04-22T11:16:56.033Z"}
+{"level":"info","message":"GET /admin/logs 200 22417  0.830 ms","timestamp":"2026-04-22T11:16:56.412Z"}
+{"level":"info","message":"GET /admin/logs 304 -  1.635 ms","timestamp":"2026-04-22T11:17:23.775Z"}
+{"level":"info","message":"GET / 302 35  0.377 ms","timestamp":"2026-04-22T11:17:31.557Z"}
+{"level":"info","message":"GET /login 200 2908  0.342 ms","timestamp":"2026-04-22T11:17:31.559Z"}
+{"level":"info","message":"POST /checkEmail 200 26  0.958 ms","timestamp":"2026-04-22T11:17:55.008Z"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T11:17:55.050Z"}
+{"level":"info","message":"POST /login 200 25  42.993 ms","timestamp":"2026-04-22T11:17:55.050Z"}
+{"level":"info","message":"GET / 302 35  0.758 ms","timestamp":"2026-04-22T11:17:55.068Z"}
+{"level":"info","message":"GET /admin 304 -  0.949 ms","timestamp":"2026-04-22T11:17:55.071Z"}
+{"level":"info","message":"GET /admin/showUsers 304 -  1.188 ms","timestamp":"2026-04-22T11:17:56.870Z"}
+{"level":"info","message":"GET /admin/logs 200 23071  0.791 ms","timestamp":"2026-04-22T11:17:57.746Z"}
+{"level":"info","message":"GET /admin 304 -  0.530 ms","timestamp":"2026-04-22T11:18:01.783Z"}
+{"level":"info","message":"GET /admin/showUsers 304 -  1.522 ms","timestamp":"2026-04-22T11:18:02.387Z"}
+{"level":"info","message":"GET /admin/logs 304 -  0.826 ms","timestamp":"2026-04-22T11:18:02.937Z"}
+{"level":"info","message":"GET /login 200 2908  2.249 ms","timestamp":"2026-04-22T11:18:14.706Z"}
+{"level":"info","message":"GET /admin/logs 304 -  13.522 ms","timestamp":"2026-04-22T11:25:06.743Z"}
+{"level":"info","message":"GET /admin 304 -  1.220 ms","timestamp":"2026-04-22T11:25:08.579Z"}
+{"level":"info","message":"GET /admin/showUsers 304 -  11.440 ms","timestamp":"2026-04-22T11:25:09.544Z"}
+{"level":"info","message":"GET /admin/showUsers 302 35  1.479 ms","timestamp":"2026-04-22T11:25:16.521Z"}
+{"level":"info","message":"GET /login 200 2908  0.864 ms","timestamp":"2026-04-22T11:25:16.532Z"}
+{"level":"info","message":"POST /checkEmail 200 26  18.182 ms","timestamp":"2026-04-22T11:54:16.938Z"}
+{"action":"ERR_LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Failed","timestamp":"2026-04-22T11:54:16.980Z"}
+{"level":"info","message":"POST /login 400 28  50.304 ms","timestamp":"2026-04-22T11:54:16.980Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.600 ms","timestamp":"2026-04-22T11:54:35.469Z"}
+{"action":"ERR_LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Failed","timestamp":"2026-04-22T11:54:35.512Z"}
+{"level":"info","message":"POST /login 400 28  42.857 ms","timestamp":"2026-04-22T11:54:35.512Z"}
+{"level":"info","message":"GET /forgetPassword 304 -  3.017 ms","timestamp":"2026-04-22T11:54:36.566Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.293 ms","timestamp":"2026-04-22T11:54:49.709Z"}
+{"action":"ERR_LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Failed","timestamp":"2026-04-22T11:54:49.752Z"}
+{"level":"info","message":"POST /login 400 28  41.692 ms","timestamp":"2026-04-22T11:54:49.752Z"}
+{"level":"info","message":"GET /forgetPassword 304 -  0.828 ms","timestamp":"2026-04-22T11:54:57.305Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.557 ms","timestamp":"2026-04-22T11:55:02.701Z"}
+{"action":"FORGET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Reset Password Link Generated","timestamp":"2026-04-22T11:55:02.706Z"}
+{"level":"info","message":"POST /forgetPassword 200 90  0.564 ms","timestamp":"2026-04-22T11:55:02.706Z"}
+{"level":"info","message":"GET /forgetPassword/d469c6b222e3b48b2274970061168053ab4384356ae4f9c56127aa6cb0e33f51?email=test@gmail.com 200 2760  1.216 ms","timestamp":"2026-04-22T11:55:02.720Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Opened Reset Password Page","timestamp":"2026-04-22T11:55:15.814Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Password Updated Successfully","timestamp":"2026-04-22T11:55:15.902Z"}
+{"level":"info","message":"POST /resetPassword 200 30  88.464 ms","timestamp":"2026-04-22T11:55:15.902Z"}
+{"level":"info","message":"GET /login 200 2908  0.853 ms","timestamp":"2026-04-22T11:55:15.914Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.432 ms","timestamp":"2026-04-22T11:55:26.598Z"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T11:55:26.641Z"}
+{"level":"info","message":"POST /login 200 25  43.150 ms","timestamp":"2026-04-22T11:55:26.641Z"}
+{"level":"info","message":"GET / 200 540  1.502 ms","timestamp":"2026-04-22T11:55:26.658Z"}
+{"action":"LOGOUT","ip":"::ffff:127.0.0.1","level":"info","message":"User Logged Out","timestamp":"2026-04-22T11:55:29.398Z"}
+{"level":"info","message":"GET /logout 200 43  0.932 ms","timestamp":"2026-04-22T11:55:29.399Z"}
+{"level":"info","message":"GET /login 200 2908  0.787 ms","timestamp":"2026-04-22T11:55:29.412Z"}
+{"level":"info","message":"POST /checkEmail 200 26  0.793 ms","timestamp":"2026-04-22T11:55:41.567Z"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T11:55:41.609Z"}
+{"level":"info","message":"POST /login 200 25  43.332 ms","timestamp":"2026-04-22T11:55:41.610Z"}
+{"level":"info","message":"GET / 304 -  1.028 ms","timestamp":"2026-04-22T11:55:41.638Z"}
+{"action":"LOGOUT","ip":"::ffff:127.0.0.1","level":"info","message":"User Logged Out","timestamp":"2026-04-22T11:55:44.194Z"}
+{"level":"info","message":"GET /logout 304 -  0.580 ms","timestamp":"2026-04-22T11:55:44.194Z"}
+{"level":"info","message":"GET /login 200 2908  0.705 ms","timestamp":"2026-04-22T11:55:44.206Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.031 ms","timestamp":"2026-04-22T11:56:34.743Z"}
+{"action":"ERR_LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Failed","timestamp":"2026-04-22T11:56:34.786Z"}
+{"level":"info","message":"POST /login 400 28  42.893 ms","timestamp":"2026-04-22T11:56:34.787Z"}
+{"level":"info","message":"POST /checkEmail 200 26  0.932 ms","timestamp":"2026-04-22T11:56:45.382Z"}
+{"action":"ERR_LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Failed","timestamp":"2026-04-22T11:56:45.423Z"}
+{"level":"info","message":"POST /login 400 28  41.314 ms","timestamp":"2026-04-22T11:56:45.423Z"}
+{"level":"info","message":"GET /forgetPassword 200 2126  1.420 ms","timestamp":"2026-04-22T11:56:48.237Z"}
+{"level":"info","message":"POST /checkEmail 200 26  0.935 ms","timestamp":"2026-04-22T11:57:01.974Z"}
+{"action":"FORGET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Reset Password Link Generated","timestamp":"2026-04-22T11:57:01.977Z"}
+{"level":"info","message":"POST /forgetPassword 200 90  2.393 ms","timestamp":"2026-04-22T11:57:01.980Z"}
+{"level":"info","message":"GET /forgetPassword/0f74978f442bb7ec2bcd50d9decf5a91b714eb3659dd52ef2970378faca8dd7e?email=admin@gmail.com 200 2761  1.411 ms","timestamp":"2026-04-22T11:57:01.998Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Opened Reset Password Page","timestamp":"2026-04-22T11:57:12.453Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Password Updated Successfully","timestamp":"2026-04-22T11:57:12.540Z"}
+{"level":"info","message":"POST /resetPassword 200 30  87.345 ms","timestamp":"2026-04-22T11:57:12.540Z"}
+{"level":"info","message":"GET /login 200 2908  0.631 ms","timestamp":"2026-04-22T11:57:12.555Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.096 ms","timestamp":"2026-04-22T11:57:32.190Z"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T11:57:32.233Z"}
+{"level":"info","message":"POST /login 200 25  43.505 ms","timestamp":"2026-04-22T11:57:32.233Z"}
+{"level":"info","message":"GET / 302 35  1.290 ms","timestamp":"2026-04-22T11:57:32.251Z"}
+{"level":"info","message":"GET /admin 200 1820  1.399 ms","timestamp":"2026-04-22T11:57:32.268Z"}
+{"action":"LOGOUT","ip":"::ffff:127.0.0.1","level":"info","message":"User Logged Out","timestamp":"2026-04-22T11:57:34.302Z"}
+{"level":"info","message":"GET /logout 304 -  0.683 ms","timestamp":"2026-04-22T11:57:34.302Z"}
+{"level":"info","message":"GET /login 200 2908  0.583 ms","timestamp":"2026-04-22T11:57:34.313Z"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T11:57:56.111Z"}
+{"level":"info","message":"POST /login 200 25  42.691 ms","timestamp":"2026-04-22T11:57:56.112Z"}
+{"level":"info","message":"POST /checkEmail 200 26  43.553 ms","timestamp":"2026-04-22T11:57:56.112Z"}
+{"level":"info","message":"GET / 302 35  0.699 ms","timestamp":"2026-04-22T11:57:56.124Z"}
+{"level":"info","message":"GET /admin 304 -  0.965 ms","timestamp":"2026-04-22T11:57:56.131Z"}
+{"action":"LOGOUT","ip":"::ffff:127.0.0.1","level":"info","message":"User Logged Out","timestamp":"2026-04-22T11:57:58.004Z"}
+{"level":"info","message":"GET /logout 304 -  0.602 ms","timestamp":"2026-04-22T11:57:58.004Z"}
+{"level":"info","message":"GET /login 200 2908  0.756 ms","timestamp":"2026-04-22T11:57:58.016Z"}
+{"action":"ERR_LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Failed","timestamp":"2026-04-22T11:58:09.400Z"}
+{"level":"info","message":"POST /login 400 28  42.153 ms","timestamp":"2026-04-22T11:58:09.400Z"}
+{"level":"info","message":"POST /checkEmail 200 26  43.671 ms","timestamp":"2026-04-22T11:58:09.401Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.469 ms","timestamp":"2026-04-22T11:58:23.127Z"}
+{"action":"ERR_LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Failed","timestamp":"2026-04-22T11:58:23.170Z"}
+{"level":"info","message":"POST /login 400 28  42.401 ms","timestamp":"2026-04-22T11:58:23.170Z"}
+{"level":"info","message":"GET /login 200 2908  4.406 ms","timestamp":"2026-04-22T11:59:26.978Z"}
+{"level":"info","message":"POST /checkEmail 200 26  15.594 ms","timestamp":"2026-04-22T11:59:32.821Z"}
+{"action":"ERR_LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Failed","timestamp":"2026-04-22T11:59:32.905Z"}
+{"level":"info","message":"POST /login 400 28  91.713 ms","timestamp":"2026-04-22T11:59:32.905Z"}
+{"level":"info","message":"GET /login 200 2908  7.001 ms","timestamp":"2026-04-22T12:12:42.239Z"}
+{"level":"info","message":"GET /login 304 -  1.164 ms","timestamp":"2026-04-22T12:12:42.419Z"}
+{"level":"info","message":"GET /login 304 -  1.576 ms","timestamp":"2026-04-22T12:12:42.567Z"}
+{"level":"info","message":"POST /checkEmail 200 26  16.749 ms","timestamp":"2026-04-22T12:12:48.615Z"}
+{"action":"ERR_LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Failed","timestamp":"2026-04-22T12:12:48.657Z"}
+{"level":"info","message":"POST /login 400 28  50.511 ms","timestamp":"2026-04-22T12:12:48.657Z"}
+{"level":"info","message":"GET /forgetPassword 200 2126  1.160 ms","timestamp":"2026-04-22T12:13:01.327Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.380 ms","timestamp":"2026-04-22T12:13:06.694Z"}
+{"action":"FORGET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Reset Password Link Generated","timestamp":"2026-04-22T12:13:06.697Z"}
+{"level":"info","message":"POST /forgetPassword 200 90  0.730 ms","timestamp":"2026-04-22T12:13:06.698Z"}
+{"level":"info","message":"GET /forgetPassword/a6fa18140dd45a57467e0d93752f6f9d46bf4af7b64f9d4f34569aeae6bae3e5?email=test@gmail.com 200 2760  0.976 ms","timestamp":"2026-04-22T12:13:06.712Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Opened Reset Password Page","timestamp":"2026-04-22T12:13:43.997Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Password Updated Successfully","timestamp":"2026-04-22T12:13:44.084Z"}
+{"level":"info","message":"POST /resetPassword 200 30  87.529 ms","timestamp":"2026-04-22T12:13:44.085Z"}
+{"level":"info","message":"GET /login 200 2908  0.605 ms","timestamp":"2026-04-22T12:13:44.097Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.394 ms","timestamp":"2026-04-22T12:13:56.565Z"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T12:13:56.608Z"}
+{"level":"info","message":"POST /login 200 42  43.220 ms","timestamp":"2026-04-22T12:13:56.609Z"}
+{"level":"info","message":"GET / 200 540  1.514 ms","timestamp":"2026-04-22T12:13:56.628Z"}
+{"action":"LOGOUT","ip":"::ffff:127.0.0.1","level":"info","message":"User Logged Out","timestamp":"2026-04-22T12:13:58.538Z"}
+{"level":"info","message":"GET /logout 304 -  0.845 ms","timestamp":"2026-04-22T12:13:58.539Z"}
+{"level":"info","message":"GET /login 200 2908  0.601 ms","timestamp":"2026-04-22T12:13:58.551Z"}
+{"level":"info","message":"GET /login 304 -  0.716 ms","timestamp":"2026-04-22T12:13:59.718Z"}
+{"level":"info","message":"GET /login 304 -  0.614 ms","timestamp":"2026-04-22T12:13:59.893Z"}
+{"level":"info","message":"GET /login 304 -  0.637 ms","timestamp":"2026-04-22T12:14:00.044Z"}
+{"level":"info","message":"GET /login 304 -  0.583 ms","timestamp":"2026-04-22T12:14:00.205Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.727 ms","timestamp":"2026-04-22T12:14:24.694Z"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T12:14:24.737Z"}
+{"level":"info","message":"POST /login 200 42  43.440 ms","timestamp":"2026-04-22T12:14:24.737Z"}
+{"level":"info","message":"GET / 304 -  1.085 ms","timestamp":"2026-04-22T12:14:24.756Z"}
+{"level":"info","message":"GET / 304 -  0.731 ms","timestamp":"2026-04-22T12:14:33.455Z"}
+{"action":"LOGOUT","ip":"::ffff:127.0.0.1","level":"info","message":"User Logged Out","timestamp":"2026-04-22T12:14:35.349Z"}
+{"level":"info","message":"GET /logout 304 -  0.990 ms","timestamp":"2026-04-22T12:14:35.349Z"}
+{"level":"info","message":"GET /login 200 2908  0.530 ms","timestamp":"2026-04-22T12:14:35.356Z"}
+{"level":"info","message":"GET /login 304 -  0.689 ms","timestamp":"2026-04-22T12:14:36.718Z"}
+{"level":"info","message":"GET /login 304 -  0.547 ms","timestamp":"2026-04-22T12:14:36.874Z"}
+{"level":"info","message":"GET /login 304 -  0.538 ms","timestamp":"2026-04-22T12:14:37.017Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.725 ms","timestamp":"2026-04-22T12:14:48.309Z"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T12:14:48.352Z"}
+{"level":"info","message":"POST /login 200 42  44.017 ms","timestamp":"2026-04-22T12:14:48.353Z"}
+{"level":"info","message":"GET / 304 -  0.700 ms","timestamp":"2026-04-22T12:14:48.366Z"}
+{"action":"LOGOUT","ip":"::ffff:127.0.0.1","level":"info","message":"User Logged Out","timestamp":"2026-04-22T12:14:50.875Z"}
+{"level":"info","message":"GET /logout 304 -  0.795 ms","timestamp":"2026-04-22T12:14:50.876Z"}
+{"level":"info","message":"GET /login 200 2908  0.349 ms","timestamp":"2026-04-22T12:14:50.879Z"}
+{"level":"info","message":"GET / 302 35  1.431 ms","timestamp":"2026-04-22T12:15:24.970Z"}
+{"level":"info","message":"GET /login 304 -  0.378 ms","timestamp":"2026-04-22T12:15:24.972Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.544 ms","timestamp":"2026-04-22T12:15:40.517Z"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T12:15:40.560Z"}
+{"level":"info","message":"POST /login 200 42  42.869 ms","timestamp":"2026-04-22T12:15:40.561Z"}
+{"level":"info","message":"GET / 200 540  0.681 ms","timestamp":"2026-04-22T12:15:40.575Z"}
+{"action":"LOGOUT","ip":"::ffff:127.0.0.1","level":"info","message":"User Logged Out","timestamp":"2026-04-22T12:15:43.648Z"}
+{"level":"info","message":"GET /logout 304 -  0.502 ms","timestamp":"2026-04-22T12:15:43.648Z"}
+{"level":"info","message":"GET /login 200 2908  0.490 ms","timestamp":"2026-04-22T12:15:43.652Z"}
+{"level":"info","message":"POST /checkEmail 200 26  2.414 ms","timestamp":"2026-04-22T12:16:00.718Z"}
+{"action":"ERR_LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Failed","timestamp":"2026-04-22T12:16:00.759Z"}
+{"level":"info","message":"POST /login 400 28  41.920 ms","timestamp":"2026-04-22T12:16:00.759Z"}
+{"level":"info","message":"GET /forgetPassword 200 2126  0.875 ms","timestamp":"2026-04-22T12:16:02.931Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.210 ms","timestamp":"2026-04-22T12:16:16.300Z"}
+{"action":"FORGET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Reset Password Link Generated","timestamp":"2026-04-22T12:16:16.303Z"}
+{"level":"info","message":"POST /forgetPassword 200 90  0.455 ms","timestamp":"2026-04-22T12:16:16.303Z"}
+{"level":"info","message":"GET /forgetPassword/68c7fe2a16b79278ef4a19a0ab0384da976113d8e94c5828c4d0b6371fda07ff?email=admin@gmail.com 200 2761  0.897 ms","timestamp":"2026-04-22T12:16:16.310Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Opened Reset Password Page","timestamp":"2026-04-22T12:16:28.845Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Password Updated Successfully","timestamp":"2026-04-22T12:16:28.932Z"}
+{"level":"info","message":"POST /resetPassword 200 30  87.699 ms","timestamp":"2026-04-22T12:16:28.932Z"}
+{"level":"info","message":"GET /login 200 2908  0.495 ms","timestamp":"2026-04-22T12:16:28.943Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.718 ms","timestamp":"2026-04-22T12:16:55.326Z"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T12:16:55.369Z"}
+{"level":"info","message":"POST /login 200 42  43.783 ms","timestamp":"2026-04-22T12:16:55.369Z"}
+{"level":"info","message":"GET / 302 35  0.632 ms","timestamp":"2026-04-22T12:16:55.378Z"}
+{"level":"info","message":"GET /admin 304 -  1.001 ms","timestamp":"2026-04-22T12:16:55.380Z"}
+{"level":"info","message":"GET /admin/showUsers 200 8741  2.552 ms","timestamp":"2026-04-22T12:16:59.511Z"}
+{"level":"info","message":"GET /admin/logs 200 48703  8.789 ms","timestamp":"2026-04-22T12:17:00.411Z"}
+{"level":"info","message":"GET / 302 35  0.455 ms","timestamp":"2026-04-22T12:17:16.239Z"}
+{"level":"info","message":"GET /login 200 2908  0.353 ms","timestamp":"2026-04-22T12:17:16.241Z"}
+{"level":"info","message":"POST /checkEmail 200 26  2.000 ms","timestamp":"2026-04-22T12:17:36.142Z"}
+{"action":"ERR_LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Failed","timestamp":"2026-04-22T12:17:36.186Z"}
+{"level":"info","message":"POST /login 400 28  44.706 ms","timestamp":"2026-04-22T12:17:36.186Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.155 ms","timestamp":"2026-04-22T12:17:44.989Z"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T12:17:45.031Z"}
+{"level":"info","message":"POST /login 200 42  43.006 ms","timestamp":"2026-04-22T12:17:45.031Z"}
+{"level":"info","message":"GET / 302 35  0.572 ms","timestamp":"2026-04-22T12:17:45.039Z"}
+{"level":"info","message":"GET /admin 200 1820  0.704 ms","timestamp":"2026-04-22T12:17:45.041Z"}
+{"level":"info","message":"GET / 302 35  0.609 ms","timestamp":"2026-04-22T12:17:55.357Z"}
+{"level":"info","message":"GET /login 200 2908  0.585 ms","timestamp":"2026-04-22T12:17:55.363Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.410 ms","timestamp":"2026-04-22T12:17:58.190Z"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T12:17:58.232Z"}
+{"level":"info","message":"POST /login 200 42  42.695 ms","timestamp":"2026-04-22T12:17:58.233Z"}
+{"level":"info","message":"GET / 302 35  0.781 ms","timestamp":"2026-04-22T12:17:58.241Z"}
+{"level":"info","message":"GET /admin 200 1820  0.593 ms","timestamp":"2026-04-22T12:17:58.243Z"}
+{"action":"LOGOUT","ip":"::ffff:127.0.0.1","level":"info","message":"User Logged Out","timestamp":"2026-04-22T12:18:00.516Z"}
+{"level":"info","message":"GET /logout 200 43  1.480 ms","timestamp":"2026-04-22T12:18:00.517Z"}
+{"level":"info","message":"GET /login 200 2908  0.536 ms","timestamp":"2026-04-22T12:18:00.521Z"}
+{"level":"info","message":"GET /login 200 2908  2.356 ms","timestamp":"2026-04-22T12:18:18.655Z"}
+{"level":"info","message":"POST /checkEmail 200 26  3.313 ms","timestamp":"2026-04-22T12:18:38.666Z"}
+{"action":"LOGIN","ip":"::ffff:192.168.22.73","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T12:18:38.707Z"}
+{"level":"info","message":"POST /login 200 42  43.055 ms","timestamp":"2026-04-22T12:18:38.707Z"}
+{"level":"info","message":"GET / 302 35  0.380 ms","timestamp":"2026-04-22T12:18:38.720Z"}
+{"level":"info","message":"GET /admin 200 1820  0.700 ms","timestamp":"2026-04-22T12:18:38.722Z"}
+{"action":"LOGOUT","ip":"::ffff:192.168.22.73","level":"info","message":"User Logged Out","timestamp":"2026-04-22T12:18:45.022Z"}
+{"level":"info","message":"GET /logout 200 43  1.180 ms","timestamp":"2026-04-22T12:18:45.023Z"}
+{"level":"info","message":"GET /login 200 2908  0.911 ms","timestamp":"2026-04-22T12:18:45.032Z"}
+{"level":"info","message":"GET /login 304 -  2.383 ms","timestamp":"2026-04-22T12:19:02.169Z"}
+{"level":"info","message":"POST /checkEmail 200 26  3.511 ms","timestamp":"2026-04-22T12:19:23.962Z"}
+{"action":"ERR_LOGIN","ip":"::ffff:192.168.22.73","level":"info","message":"User Login Failed","timestamp":"2026-04-22T12:19:24.004Z"}
+{"level":"info","message":"POST /login 400 28  41.446 ms","timestamp":"2026-04-22T12:19:24.004Z"}
+{"level":"info","message":"GET /forgetPassword 200 2126  2.099 ms","timestamp":"2026-04-22T12:19:32.143Z"}
+{"level":"info","message":"POST /checkEmail 200 26  2.836 ms","timestamp":"2026-04-22T12:19:42.553Z"}
+{"action":"FORGET_PASSWORD","ip":"::ffff:192.168.22.73","level":"info","message":"Reset Password Link Generated","timestamp":"2026-04-22T12:19:42.556Z"}
+{"level":"info","message":"POST /forgetPassword 200 90  0.647 ms","timestamp":"2026-04-22T12:19:42.556Z"}
+{"level":"info","message":"GET /forgetPassword/abd86b1a0a8453e953983016a728800d524d37aeac31d48840aa1f190038b04f?email=test@gmail.com 200 2760  0.922 ms","timestamp":"2026-04-22T12:19:42.565Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:192.168.22.73","level":"info","message":"Opened Reset Password Page","timestamp":"2026-04-22T12:20:05.918Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:192.168.22.73","level":"info","message":"Password Updated Successfully","timestamp":"2026-04-22T12:20:06.006Z"}
+{"level":"info","message":"POST /resetPassword 200 30  89.360 ms","timestamp":"2026-04-22T12:20:06.006Z"}
+{"level":"info","message":"GET /login 304 -  0.606 ms","timestamp":"2026-04-22T12:20:06.020Z"}
+{"level":"info","message":"POST /checkEmail 200 26  3.668 ms","timestamp":"2026-04-22T12:20:22.722Z"}
+{"action":"LOGIN","ip":"::ffff:192.168.22.73","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T12:20:22.764Z"}
+{"level":"info","message":"POST /login 200 42  43.435 ms","timestamp":"2026-04-22T12:20:22.764Z"}
+{"level":"info","message":"GET / 200 540  0.630 ms","timestamp":"2026-04-22T12:20:22.774Z"}
+{"action":"LOGOUT","ip":"::ffff:192.168.22.73","level":"info","message":"User Logged Out","timestamp":"2026-04-22T12:20:30.191Z"}
+{"level":"info","message":"GET /logout 304 -  1.853 ms","timestamp":"2026-04-22T12:20:30.192Z"}
+{"level":"info","message":"GET /login 200 2908  0.969 ms","timestamp":"2026-04-22T12:20:30.201Z"}
+{"level":"info","message":"GET / 302 35  1.721 ms","timestamp":"2026-04-22T12:21:49.329Z"}
+{"level":"info","message":"GET /login 304 -  1.222 ms","timestamp":"2026-04-22T12:21:49.333Z"}
+{"level":"info","message":"POST /checkEmail 200 26  2.906 ms","timestamp":"2026-04-22T12:22:05.865Z"}
+{"action":"LOGIN","ip":"::ffff:192.168.22.73","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T12:22:05.906Z"}
+{"level":"info","message":"POST /login 200 42  42.745 ms","timestamp":"2026-04-22T12:22:05.906Z"}
+{"level":"info","message":"GET / 200 540  0.710 ms","timestamp":"2026-04-22T12:22:05.920Z"}
+{"action":"LOGOUT","ip":"::ffff:192.168.22.73","level":"info","message":"User Logged Out","timestamp":"2026-04-22T12:22:07.453Z"}
+{"level":"info","message":"GET /logout 304 -  1.061 ms","timestamp":"2026-04-22T12:22:07.454Z"}
+{"level":"info","message":"GET /login 200 2908  0.832 ms","timestamp":"2026-04-22T12:22:07.464Z"}
+{"level":"info","message":"POST /checkEmail 200 26  3.536 ms","timestamp":"2026-04-22T12:22:10.529Z"}
+{"action":"ERR_LOGIN","ip":"::ffff:192.168.22.73","level":"info","message":"User Login Failed","timestamp":"2026-04-22T12:22:10.570Z"}
+{"level":"info","message":"POST /login 400 28  43.317 ms","timestamp":"2026-04-22T12:22:10.571Z"}
+{"level":"info","message":"GET / 302 35  3.918 ms","timestamp":"2026-04-22T12:24:53.686Z"}
+{"level":"info","message":"GET /admin 304 -  6.032 ms","timestamp":"2026-04-22T12:24:53.713Z"}
+{"action":"LOGOUT","ip":"::ffff:127.0.0.1","level":"info","message":"User Logged Out","timestamp":"2026-04-22T12:24:55.540Z"}
+{"level":"info","message":"GET /logout 304 -  1.566 ms","timestamp":"2026-04-22T12:24:55.541Z"}
+{"level":"info","message":"GET /login 200 2908  0.807 ms","timestamp":"2026-04-22T12:24:55.546Z"}
+{"level":"info","message":"POST /checkEmail 200 26  18.432 ms","timestamp":"2026-04-22T12:25:23.966Z"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T12:25:24.011Z"}
+{"level":"info","message":"POST /login 200 42  54.159 ms","timestamp":"2026-04-22T12:25:24.012Z"}
+{"level":"info","message":"GET / 200 540  0.869 ms","timestamp":"2026-04-22T12:25:24.024Z"}
+{"action":"LOGOUT","ip":"::ffff:127.0.0.1","level":"info","message":"User Logged Out","timestamp":"2026-04-22T12:27:01.703Z"}
+{"level":"info","message":"GET /logout 304 -  3.527 ms","timestamp":"2026-04-22T12:27:01.705Z"}
+{"level":"info","message":"GET /login 200 2908  2.628 ms","timestamp":"2026-04-22T12:27:01.714Z"}
+{"level":"info","message":"GET /forgetPassword 200 2126  0.809 ms","timestamp":"2026-04-22T12:27:02.864Z"}
+{"level":"info","message":"POST /checkEmail 200 26  14.509 ms","timestamp":"2026-04-22T12:27:08.108Z"}
+{"action":"FORGET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Reset Password Link Generated","timestamp":"2026-04-22T12:27:08.110Z"}
+{"level":"info","message":"POST /forgetPassword 200 90  0.819 ms","timestamp":"2026-04-22T12:27:08.111Z"}
+{"level":"info","message":"GET /forgetPassword/d83e2cdcfb17fb935d666c723e90d6930a3fc73245e7228e58bd59f83372d5b7?email=test@gmail.com 200 2760  1.011 ms","timestamp":"2026-04-22T12:27:08.116Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Opened Reset Password Page","timestamp":"2026-04-22T12:27:24.636Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Password Updated Successfully","timestamp":"2026-04-22T12:27:24.725Z"}
+{"level":"info","message":"POST /resetPassword 200 30  90.008 ms","timestamp":"2026-04-22T12:27:24.725Z"}
+{"level":"info","message":"GET /login 304 -  0.860 ms","timestamp":"2026-04-22T12:27:24.737Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Opened Reset Password Page","timestamp":"2026-04-22T12:27:51.411Z"}
+{"action":"ERR_RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Entered Password is same as Old Password","timestamp":"2026-04-22T12:27:51.466Z"}
+{"level":"info","message":"POST /resetPassword 400 54  60.917 ms","timestamp":"2026-04-22T12:27:51.468Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Opened Reset Password Page","timestamp":"2026-04-22T12:27:58.613Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Password Updated Successfully","timestamp":"2026-04-22T12:27:58.707Z"}
+{"level":"info","message":"POST /resetPassword 200 30  95.265 ms","timestamp":"2026-04-22T12:27:58.708Z"}
+{"level":"info","message":"GET /login 304 -  2.924 ms","timestamp":"2026-04-22T12:27:58.723Z"}
+{"level":"info","message":"GET /login 304 -  4.661 ms","timestamp":"2026-04-22T12:28:58.703Z"}
+{"level":"info","message":"GET /login 304 -  1.148 ms","timestamp":"2026-04-22T12:28:58.866Z"}
+{"level":"info","message":"GET /login 304 -  0.778 ms","timestamp":"2026-04-22T12:28:59.026Z"}
+{"level":"info","message":"GET /login 304 -  0.801 ms","timestamp":"2026-04-22T12:28:59.196Z"}
+{"level":"info","message":"POST /checkEmail 200 26  18.942 ms","timestamp":"2026-04-22T12:29:00.328Z"}
+{"action":"ERR_LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Failed","timestamp":"2026-04-22T12:29:00.371Z"}
+{"level":"info","message":"POST /login 400 28  50.876 ms","timestamp":"2026-04-22T12:29:00.371Z"}
+{"level":"info","message":"GET /forgetPassword 200 2126  0.778 ms","timestamp":"2026-04-22T12:29:02.326Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.492 ms","timestamp":"2026-04-22T12:29:13.390Z"}
+{"action":"FORGET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Reset Password Link Generated","timestamp":"2026-04-22T12:29:13.393Z"}
+{"level":"info","message":"POST /forgetPassword 200 90  0.533 ms","timestamp":"2026-04-22T12:29:13.393Z"}
+{"level":"info","message":"GET /forgetPassword/ac28d2dea3d4307f00473e2034011e73ac545f835cb2ea74e3c29a2befc81222?email=admin@gmail.com 200 2761  0.839 ms","timestamp":"2026-04-22T12:29:13.399Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Opened Reset Password Page","timestamp":"2026-04-22T12:29:34.124Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Password Updated Successfully","timestamp":"2026-04-22T12:29:34.215Z"}
+{"level":"info","message":"POST /resetPassword 200 30  92.391 ms","timestamp":"2026-04-22T12:29:34.215Z"}
+{"level":"info","message":"GET /login 200 2908  0.568 ms","timestamp":"2026-04-22T12:29:34.226Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.362 ms","timestamp":"2026-04-22T12:29:45.510Z"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T12:29:45.556Z"}
+{"level":"info","message":"POST /login 200 42  47.132 ms","timestamp":"2026-04-22T12:29:45.557Z"}
+{"level":"info","message":"GET / 302 35  1.898 ms","timestamp":"2026-04-22T12:29:45.567Z"}
+{"level":"info","message":"GET /admin 304 -  1.356 ms","timestamp":"2026-04-22T12:29:45.582Z"}
+{"action":"LOGOUT","ip":"::ffff:127.0.0.1","level":"info","message":"User Logged Out","timestamp":"2026-04-22T12:29:49.955Z"}
+{"level":"info","message":"GET /logout 304 -  1.068 ms","timestamp":"2026-04-22T12:29:49.956Z"}
+{"level":"info","message":"GET /login 200 2908  0.448 ms","timestamp":"2026-04-22T12:29:49.959Z"}
+{"level":"info","message":"GET /forgetPassword 200 2126  0.649 ms","timestamp":"2026-04-22T12:29:52.541Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.165 ms","timestamp":"2026-04-22T12:29:57.909Z"}
+{"action":"FORGET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Reset Password Link Generated","timestamp":"2026-04-22T12:29:57.910Z"}
+{"level":"info","message":"POST /forgetPassword 200 90  0.296 ms","timestamp":"2026-04-22T12:29:57.910Z"}
+{"level":"info","message":"GET /forgetPassword/ce3bafd367bb76780ab4356d8cd0b313750cd12fa1352b9357d4a05a702e6161?email=test@gmail.com 200 2760  0.714 ms","timestamp":"2026-04-22T12:29:57.917Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Opened Reset Password Page","timestamp":"2026-04-22T12:30:08.908Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Password Updated Successfully","timestamp":"2026-04-22T12:30:08.996Z"}
+{"level":"info","message":"POST /resetPassword 200 30  88.587 ms","timestamp":"2026-04-22T12:30:08.996Z"}
+{"level":"info","message":"GET /login 304 -  0.485 ms","timestamp":"2026-04-22T12:30:09.008Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.162 ms","timestamp":"2026-04-22T12:30:25.597Z"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T12:30:25.645Z"}
+{"level":"info","message":"POST /login 200 42  48.450 ms","timestamp":"2026-04-22T12:30:25.645Z"}
+{"level":"info","message":"GET / 200 540  0.751 ms","timestamp":"2026-04-22T12:30:25.656Z"}
+{"level":"info","message":"GET /login 200 2908  0.665 ms","timestamp":"2026-04-22T12:30:28.127Z"}
+{"level":"info","message":"GET /forgetPassword 200 2126  4.126 ms","timestamp":"2026-04-22T12:31:11.251Z"}
+{"level":"info","message":"POST /checkEmail 200 26  16.908 ms","timestamp":"2026-04-22T12:31:16.573Z"}
+{"action":"FORGET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Reset Password Link Generated","timestamp":"2026-04-22T12:31:16.576Z"}
+{"level":"info","message":"POST /forgetPassword 200 90  0.601 ms","timestamp":"2026-04-22T12:31:16.576Z"}
+{"level":"info","message":"GET /forgetPassword/9f853ed908da0445f88f8a7acd8bb8afd75b78ef1aef5e5de58d1bdcf07a2226?email=test@gmail.com 200 2760  1.588 ms","timestamp":"2026-04-22T12:31:16.583Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Opened Reset Password Page","timestamp":"2026-04-22T12:31:28.612Z"}
+{"action":"RESET_PASSWORD","ip":"::ffff:127.0.0.1","level":"info","message":"Password Updated Successfully","timestamp":"2026-04-22T12:31:28.699Z"}
+{"level":"info","message":"POST /resetPassword 200 30  87.981 ms","timestamp":"2026-04-22T12:31:28.699Z"}
+{"level":"info","message":"GET /login 304 -  0.745 ms","timestamp":"2026-04-22T12:31:28.709Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.958 ms","timestamp":"2026-04-22T12:37:13.830Z"}
+{"action":"ERR_LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Failed","timestamp":"2026-04-22T12:37:13.875Z"}
+{"level":"info","message":"POST /login 400 28  46.320 ms","timestamp":"2026-04-22T12:37:13.876Z"}
+{"level":"info","message":"POST /checkEmail 200 26  1.234 ms","timestamp":"2026-04-22T12:37:23.132Z"}
+{"action":"LOGIN","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T12:37:23.177Z"}
+{"level":"info","message":"POST /login 200 42  44.941 ms","timestamp":"2026-04-22T12:37:23.178Z"}
+{"level":"info","message":"GET / 302 35  1.722 ms","timestamp":"2026-04-22T12:37:23.189Z"}
+{"level":"info","message":"GET /admin 304 -  1.388 ms","timestamp":"2026-04-22T12:37:23.211Z"}
+{"level":"info","message":"GET /admin/showUsers 200 6284  2.143 ms","timestamp":"2026-04-22T12:37:24.983Z"}
+{"level":"info","message":"GET /admin/logs 200 5834  8.498 ms","timestamp":"2026-04-22T12:37:25.950Z"}
+{"level":"info","message":"GET /admin/logs 200 104588  2.123 ms","timestamp":"2026-04-22T12:37:43.368Z"}
+{"level":"info","message":"GET /admin/logs 200 104588  15.844 ms","timestamp":"2026-04-22T12:38:37.441Z"}
+{"level":"info","message":"GET /admin/logs 304 -  3.249 ms","timestamp":"2026-04-22T12:38:37.884Z"}
+{"level":"info","message":"GET /admin/logs 304 -  2.587 ms","timestamp":"2026-04-22T12:38:38.083Z"}
+{"level":"info","message":"GET /admin/logs 304 -  1.663 ms","timestamp":"2026-04-22T12:38:38.274Z"}
+{"level":"info","message":"GET /admin/logs 304 -  1.751 ms","timestamp":"2026-04-22T12:38:38.489Z"}
+{"level":"info","message":"GET /admin/logs 200 104618  1.649 ms","timestamp":"2026-04-22T12:41:01.520Z"}
+{"level":"info","message":"GET /admin/logs 200 104618  2.194 ms","timestamp":"2026-04-22T12:41:10.248Z"}
+{"level":"info","message":"GET /admin/logs 304 -  2.125 ms","timestamp":"2026-04-22T12:41:10.467Z"}
+{"level":"info","message":"GET /admin/logs 304 -  1.735 ms","timestamp":"2026-04-22T12:41:10.666Z"}
+{"level":"info","message":"GET /admin/logs 304 -  2.020 ms","timestamp":"2026-04-22T12:41:11.367Z"}
+{"level":"info","message":"GET /admin/logs 304 -  1.608 ms","timestamp":"2026-04-22T12:41:11.522Z"}
+{"level":"info","message":"GET /admin/logs 304 -  1.846 ms","timestamp":"2026-04-22T12:41:11.699Z"}
+{"level":"info","message":"GET /admin/logs 304 -  1.419 ms","timestamp":"2026-04-22T12:41:11.858Z"}
+{"level":"info","message":"GET /admin/logs 304 -  3.012 ms","timestamp":"2026-04-22T12:41:12.011Z"}
+{"level":"info","message":"GET /admin/logs 200 104619  1.610 ms","timestamp":"2026-04-22T12:41:22.031Z"}
+{"level":"info","message":"GET /admin/logs 304 -  1.906 ms","timestamp":"2026-04-22T12:41:22.347Z"}
+{"level":"info","message":"GET /admin/logs 200 104619  1.597 ms","timestamp":"2026-04-22T12:41:32.204Z"}
+{"level":"info","message":"GET /admin/logs 200 4558  1.236 ms","timestamp":"2026-04-22T12:41:46.504Z"}
+{"level":"info","message":"GET /admin/logs 200 4565  5.924 ms","timestamp":"2026-04-22T12:46:16.001Z"}
+{"level":"info","message":"GET /admin/logs 200 4565  3.322 ms","timestamp":"2026-04-22T12:46:39.124Z"}
+{"level":"info","message":"GET / 302 35  2.847 ms","timestamp":"2026-04-22T12:46:57.011Z"}
+{"level":"info","message":"GET /login 200 2908  0.773 ms","timestamp":"2026-04-22T12:46:57.013Z"}
+{"level":"info","message":"POST /checkEmail 200 26  18.035 ms","timestamp":"2026-04-22T12:47:12.966Z"}
+{"action":"LOGIN","email":"test@gmail.com","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T12:47:13.009Z"}
+{"level":"info","message":"POST /login 200 42  52.790 ms","timestamp":"2026-04-22T12:47:13.010Z"}
+{"level":"info","message":"GET / 200 540  0.802 ms","timestamp":"2026-04-22T12:47:13.015Z"}
+{"level":"info","message":"GET /admin/logs 200 5333  9.225 ms","timestamp":"2026-04-22T12:47:15.279Z"}
+{"level":"info","message":"GET / 200 540  0.886 ms","timestamp":"2026-04-22T12:47:39.751Z"}
+{"level":"info","message":"GET /admin/logs 200 5365  1.359 ms","timestamp":"2026-04-22T12:47:43.002Z"}
+{"level":"info","message":"GET /admin/logs 304 -  1.236 ms","timestamp":"2026-04-22T12:47:43.484Z"}
+{"level":"info","message":"GET /admin/logs 304 -  1.182 ms","timestamp":"2026-04-22T12:47:43.707Z"}
+{"level":"info","message":"GET /admin/logs 200 5378  1.504 ms","timestamp":"2026-04-22T12:47:54.340Z"}
+{"level":"info","message":"GET /admin/logs 200 5379  1.101 ms","timestamp":"2026-04-22T12:48:22.504Z"}
+{"level":"info","message":"GET /admin/logs 304 -  1.262 ms","timestamp":"2026-04-22T12:48:23.113Z"}
+{"level":"info","message":"GET /admin/logs 304 -  0.871 ms","timestamp":"2026-04-22T12:48:23.296Z"}
+{"level":"info","message":"GET /admin/logs 304 -  0.941 ms","timestamp":"2026-04-22T12:48:23.481Z"}
+{"level":"info","message":"GET /admin/logs 304 -  1.302 ms","timestamp":"2026-04-22T12:48:23.682Z"}
+{"level":"info","message":"GET /admin/logs 304 -  0.911 ms","timestamp":"2026-04-22T12:48:23.842Z"}
+{"level":"info","message":"GET /admin/logs 200 5348  1.051 ms","timestamp":"2026-04-22T12:48:32.710Z"}
+{"level":"info","message":"GET /admin/showUsers 304 -  2.267 ms","timestamp":"2026-04-22T12:48:42.622Z"}
+{"level":"info","message":"GET /admin/showUsers 200 6312  2.272 ms","timestamp":"2026-04-22T12:49:21.955Z"}
+{"level":"info","message":"GET /admin 304 -  0.928 ms","timestamp":"2026-04-22T13:33:11.646Z"}
+{"level":"info","message":"GET /logout 500 1411  3.061 ms","timestamp":"2026-04-22T13:33:13.402Z"}
+{"level":"info","message":"GET /admin 304 -  0.849 ms","timestamp":"2026-04-22T13:33:16.502Z"}
+{"level":"info","message":"GET /logout 500 1411  1.280 ms","timestamp":"2026-04-22T13:33:17.917Z"}
+{"action":"LOGOUT","ip":"::ffff:127.0.0.1","level":"info","message":"User Logged Out","timestamp":"2026-04-22T13:35:04.666Z"}
+{"level":"info","message":"GET /logout 200 43  3.875 ms","timestamp":"2026-04-22T13:35:04.668Z"}
+{"level":"info","message":"GET /login 200 2908  3.106 ms","timestamp":"2026-04-22T13:35:04.691Z"}
+{"level":"info","message":"POST /checkEmail 200 26  15.960 ms","timestamp":"2026-04-22T13:41:40.614Z"}
+{"action":"ERR_LOGIN","email":"admin@gmail.com","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Failed","timestamp":"2026-04-22T13:41:40.657Z"}
+{"level":"info","message":"POST /login 400 28  49.187 ms","timestamp":"2026-04-22T13:41:40.657Z"}
+{"action":"LOGIN","email":"admin@gmail.com","ip":"::ffff:127.0.0.1","level":"info","message":"User Login Successfull","timestamp":"2026-04-22T13:41:47.440Z"}
+{"level":"info","message":"POST /login 200 42  44.097 ms","timestamp":"2026-04-22T13:41:47.440Z"}
+{"level":"info","message":"POST /checkEmail 200 26  45.470 ms","timestamp":"2026-04-22T13:41:47.440Z"}
+{"level":"info","message":"GET / 302 35  3.161 ms","timestamp":"2026-04-22T13:41:47.470Z"}
+{"level":"info","message":"GET /admin 304 -  1.892 ms","timestamp":"2026-04-22T13:41:47.498Z"}
+{"level":"info","message":"GET /admin/logs 200 7633  8.419 ms","timestamp":"2026-04-22T13:41:49.667Z"}

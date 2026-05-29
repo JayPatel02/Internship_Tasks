@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Apllication Form</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Job Application Form</h1>
+    </div>
+    <form  id="form_JobApp">
+        <fieldset id="basicDiv" disabled>
+            <legend>Basic Details</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="fName">First Name</label>
+                        <input type="text" id="fName" name="firstName" class="valString"
+                            value="<%= basData.first_name %>">
+                    </td>
+                    <td>
+                        <label for="lName">Last Name</label>
+                        <input type="text" id="lName" name="lastName" class="valString"
+                            value="<%= basData.last_name %>">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="designation">Designation</label>
+                        <input type="text" id="designation" name="designation" class="valString"
+                            value="<%= basData.designation %>">
+                    </td>
+                    <td>
+                        <label for="address1">Address1</label>
+                        <input type="text" name="address1" id="address1" value="<%= basData.address1 %>">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">E-mail</label>
+                        <input type="text" id="email" name="email" value="<%= basData.email %>">
+                    </td>
+                    <td>
+                        <label for="address2">Address2</label>
+                        <input type="text" name="address2" id="address2" value="<%= basData.address2 %>">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phoneNum">Phone Number</label>
+                        <input type="text" id="phoneNum" name="phoneNumber" class="valPhoneN"
+                            value="<%= basData.phone_number %>">
+                    </td>
+                    <td>
+                        <label for="cityName">City</label>
+                        <input type="text" id="cityName" name="cityName" class="valString" value="<%= basData.city %>">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="gender">Gender</label>
+                        <input type="radio" name="gender" value="Male" <%=basData.gender==='Male' ? 'checked' : '' %>
+                        >Male
+                        <input type="radio" name="gender" value="Female" <%=basData.gender==='Female' ? 'checked' : ''
+                            %>>Female
+                        <input type="radio" name="gender" value="Other" <%=basData.gender==='Other' ? 'checked' : ''
+                            %>>Other
+                    </td>
+                    <td>
+                        <label for="stateName">State</label>
+                        <select name="stateNames" id="stateName">
+                            <option value="Gujarat" <%=basData.state==='Gujarat' ? 'selected' : '' %>>Gujarat</option>
+                            <option value="Rajashthan" <%=basData.state==='Rajashthan' ? 'selected' : '' %>>Rajeshthan
+                            </option>
+                            <option value="Maharastra" <%=basData.state==='Maharastra' ? 'selected' : '' %>>Maharastra
+                            </option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="pinCode">Pincode</label>
+                        <input type="text" id="pinCode" name="pinCode" value="<%= basData.pincode %>">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="relationshipDrop">Relationship Status</label>
+                        <select name="relationshipDrop" id="relationshipDrop">
+                            <option value="Unmarried" <%=basData.relationship_status==='Unmarried' ? 'selected' : '' %>
+                                >Unmarried</option>
+                            <option value="Married" <%=basData.relationship_status==='Married' ? 'selected' : '' %>
+                                >Married</option>
+                            <option value="Divored" <%=basData.relationship_status==='Divored' ? 'selected' : '' %>
+                                >Divored</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="dob">Date Of Birth</label>
+                        <input type="date" name="dateOfBirth" id="dateOfBirth"
+                            value="<%= basData.date_of_birth.toISOString().split('T')[0] %>">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset id="eduDetails" disabled>
+            <legend>Education Details</legend>
+            <table id="educationTbl">
+                <tr id="eduHeading">
+                    <td>Course</td>
+                    <td>Passing Year</td>
+                    <td>University / Board</td>
+                    <td>Result</td>
+                </tr>
+                <% let eduCounter=0 %>
+                    <% eduData.forEach(row=> { %>
+                        <tr>
+                            <td style="padding: 0;">
+                                <select name="education[<%= eduCounter %>][course]"
+                                    style="height:4vmin;width:80%;background:white;border:none;font-size:large;">
+                                    <option value="10" <%=(row.course_name==10) ? 'selected' :""%>>10th</option>
+                                    <option value="12" <%=(row.course_name==12) ? 'selected' : "" %>>12th</option>
+                                    <option value="BTech" <%=(row.course_name=="BTech" ) ? 'selected' : "" %>>Btech
+                                    </option>
+                                    <option value="BE" <%=(row.course_name=="BE" ) ? 'selected' : "" %>>BE</option>
+                                    <option value="MTech" <%=(row.course_name=="MTech" ) ? 'selected' : "" %>>MTech
+                                    </option>
+                                </select>
+                            </td>
+                            <td style="padding: 0;">
+                                <input type="text" name="education[<%= eduCounter %>][passingYear]" minlength="4"
+                                    maxlength="4" value="<%= row.passing_year %>">
+                            </td>
+                            <td style="padding: 0;">
+                                <input type="text" name="education[<%= eduCounter %>][uniBod]"
+                                    value="<%= row.university_board %>">
+                            </td>
+                            <td style="padding: 0;">
+                                <input type="text" name="education[<%= eduCounter %>][result]" maxlength="4"
+                                    value="<%= row.result %>">
+                            </td>
+                        </tr>
+                        <% eduCounter++ %>
+                            <% }) %>
+            </table>
+        </fieldset>
+
+        <fieldset id="compDetails" disabled>
+            <legend>Work Experience</legend>
+            <table id="compTbl">
+                <tr id="compHeading">
+                    <td>Company</td>
+                    <td>From Date</td>
+                    <td>To Date</td>
+                    <td>Annual Package</td>
+                    <td>Reason to leave</td>
+                    <td>Ref. Contact Number</td>
+                    <td>Ref. Contact Name</td>
+                </tr>
+                <% let compCounter=0 %>
+                    <% compData.forEach((row)=>{ %>
+                        <tr>
+                            <td style="padding: 0;">
+                                <input type="text" name="company[<%= compCounter %>][company]" class="compclass"
+                                    value="<%= row.company_name %>">
+                            </td>
+                            <td style="padding: 0;">
+                                <input type="date" name="company[<%= compCounter %>][fromDate]"
+                                    value="<%= row.from_date.toISOString().split('T')[0]%>">
+                            </td>
+                            <td style="padding: 0;">
+                                <input type="date" name="company[<%= compCounter %>][toDate]"
+                                    value="<%= row.to_date.toISOString().split('T')[0]%>">
+                            </td>
+                            <td style="padding: 0;">
+                                <input type="text" name="company[<%= compCounter %>][annualPackage]"
+                                    value="<%= row.annual_package %>">
+                            </td>
+                            <td style="padding: 0;">
+                                <input type="text" name="company[<%= compCounter %>][reasonToLeave]"
+                                    value="<%= row.reason_to_leave %>">
+                            </td>
+                            <td style="padding: 0;">
+                                <input type="text" name="company[<%= compCounter %>][refContNumber]"
+                                    value="<%= row.ref_contact_number %>">
+                            </td>
+                            <td style="padding: 0;">
+                                <input type="text" name="company[<%= compCounter %>][refContName]"
+                                    value="<%= row.ref_contact_name %>">
+                            </td>
+                        </tr>
+                        <% compCounter++ %>
+                            <% }) %>
+            </table>
+        </fieldset>
+
+        <fieldset id="languageKnown" disabled>
+            <legend>Language Known</legend>
+            <table id="langKnownTbl">
+                <% 
+                    let langMap = {}
+                    langData.forEach((lang)=>{
+                        langMap[lang.lang_id] = [lang.can_read,lang.can_write,lang.can_speak]
+                    })
+                    
+                %>
+                <tr>
+                    <td></td>
+                    <td>Read</td>
+                    <td>Write</td>
+                    <td>Speak</td>
+                </tr>
+                <% langNames.forEach((ele,i)=>{%>
+                    <% 
+                        let control = langMap[langIds[i]] ? "checked" : ""
+                        let readV = "disabled"; let writeV = "disabled"; let speakV = "disabled"
+                        if(control == "checked"){
+                            readV = langMap[langIds[i]][0] == 1 ? "checked" : ""
+                            writeV = langMap[langIds[i]][1] == 1 ? "checked" : ""
+                            speakV = langMap[langIds[i]][2] == 1 ? "checked" : ""
+                        }  
+                    %>
+                    <tr>
+                        <td><input type="checkbox" name="lang[<%= ele %>][selected]" class="langTitle" <%= control %>><%= ele %>
+                        </td>
+                        <td><input type="checkbox" name="lang[<%= ele %>][read]" value="true" <%= readV %>></td>
+                        <td><input type="checkbox" name="lang[<%= ele %>][write]" value="true" <%= writeV %>></td>
+                        <td><input type="checkbox" name="lang[<%= ele %>][speak]" value="true" <%= speakV %>></td>
+                    </tr>
+                    <% }) %>
+            </table>
+        </fieldset>
+
+        <fieldset id="techKnown" disabled>
+            <legend>Technology Known</legend>
+            <table id="techKnownTbl">
+                <tr>
+                    <td></td>
+                    <td>Beginner</td>
+                    <td>Intermediate</td>
+                    <td>Expert</td>
+                </tr>
+                <% 
+                    let techMap = {}
+                    techData.forEach((tech)=>{
+                        techMap[tech.tech_id]=[tech.is_beginner,tech.is_intermediate,tech.is_expert]
+                    })
+                %>
+                <%techNames.forEach((ele,i) => { %>
+                    <%
+                        let control = techMap[techIds[i]] ? "checked" : "disabled"
+                        let bigV = "disabled" ; let intV = "disabled" ; let exV = "disabled"
+                        if(control == "checked"){
+                            bigV = techMap[techIds[i]][0] == 1 ? "checked" : "disabled"
+                            intV = techMap[techIds[i]][1] == 1 ? "checked" : "disabled"
+                            exV = techMap[techIds[i]][2] == 1 ? "checked" : "disabled"
+                        }
+                    %>
+                    <tr>
+                        <td><input type="checkbox" name="tech[<%= ele %>][selected]" <%= control%> ><%= ele %>
+                        </td>
+                        <td><input type="radio" name="tech[<%= ele %>][level]" value="beginner" <%= bigV%> ></td>
+                        <td><input type="radio" name="tech[<%= ele %>][level]" value="intermediate" <%= intV%>></td>
+                        <td><input type="radio" name="tech[<%= ele %>][level]" value="expert" <%= exV%>></td>
+                    </tr>
+                <% }) %>
+            </table>
+        </fieldset>
+
+        <fieldset id="referenceContact" disabled>
+            <legend>Reference Contact</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="refName1">Name</label>
+                        <input type="text" id="refName1" name="refName1" <% if(refData.length> 0) {%>
+                        value="<%= refData[0].ref_name %>"
+                            <% } else { %>
+                                value = ""
+                                <% } %>
+                                    >
+                    </td>
+                    <td>
+                        <label for="refContNum1">Contact Number</label>
+                        <input type="text" id="refContNum1" name="refContNum1" <% if(refData.length> 0) {%>
+                        value="<%= refData[0].ref_contact_number %>"
+                            <% } else { %>
+                                value = ""
+                                <% } %>
+                                    >
+                    </td>
+                    <td>
+                        <label for="refRel1">Relation</label>
+                        <input type="text" id="refRel1" name="refRelation1" <% if(refData.length> 0) {%>
+                        value="<%= refData[0].ref_relation %>"
+                            <% } else { %>
+                                value = ""
+                                <% } %>
+                                    >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="refName2">Name</label>
+                        <input type="text" id="refName2" name="refName2" <% if(refData.length> 1) {%>
+                        value="<%= refData[1].ref_name %>"
+                            <% } else { %>
+                                value = ""
+                                <% } %>
+                                    >
+                    </td>
+                    <td>
+                        <label for="refContNum2">Contact Number</label>
+                        <input type="text" id="refContNum2" name="refContNum2" <% if(refData.length> 1) {%>
+                        value="<%= refData[1].ref_contact_number %>"
+                            <% } else { %>
+                                value = ""
+                                <% } %>
+                                    >
+                    </td>
+                    <td>
+                        <label for="refRel2">Relation</label>
+                        <input type="text" id="refRel2" name="refRelation2" <% if(refData.length> 1) {%>
+                        value="<%= refData[1].ref_relation %>"
+                            <% } else { %>
+                                value = ""
+                                <% } %>
+                                    >
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset id="peferences" disabled>
+            <legend>Peferences</legend>
+            <table>
+                <tr>
+                    <td rowspan="3">
+                        <label for="locations">Prefered City</label>
+                        <select name="peferedLoc" id="locations" multiple size="2"
+                            style="height: max-content;width:max-content;">
+                            <option value="Vadodara" <% if(basData.preferedCity1=="Vadodara" ||
+                                basData.preferedCity2=="Vadodara" || basData.preferedCity3=="Vadodara" ){ %>
+                                selected
+                                <% } %>
+                                    >Vadodara
+                            </option>
+                            <option value="Ahemdabad" <% if(basData.preferedCity1=="Ahemdabad" ||
+                                basData.preferedCity2=="Ahemdabad" || basData.preferedCity3=="Ahemdabad" ){ %>
+                                selected
+                                <% } %>>Ahemdabad
+                            </option>
+                            <option value="Surat" <% if(basData.preferedCity1=="Surat" || basData.preferedCity2=="Surat"
+                                || basData.preferedCity3=="Surat" ){ %>
+                                selected
+                                <% } %>
+                                    >Surat
+                            </option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="noticePed">Notice Period (in month)</label>
+                        <input type="text" id="noticePed" name="noticePeriod"
+                            value="<%= basData.notice_period == 0 ? "" : basData.notice_period %>">
+                    </td>
+                    <td rowspan="3">
+                        <label for="departments">Departments</label>
+                        <select name="departmentName" id="departments">
+                            <option value="Development" <%=basData.department==='Development' ? 'selected' : '' %>
+                                >Development</option>
+                            <option value="Design" <%=basData.department==='Design' ? 'selected' : '' %>>Design</option>
+                            <option value="Marketing" <%=basData.department==='Marketing' ? 'selected' : '' %>>Marketing
+                            </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="exptCtc">Expected CTC</label>
+                        <input type="text" id="exptCtc" name="expactedCtc" value="<%= basData.expected_ctc %>">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="currCtc">Current CTC</label>
+                        <input type="text" id="currCtc" name="currentCtc" value="<%= basData.current_ctc %>">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        </div>
+    </form>
+    <script>
+    </script>
+</body>
+
+</html>

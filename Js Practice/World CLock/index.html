@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock</title>
+</head>
+<body>
+    <p id="crrTime"></p>
+    <p id="LondonTime"></p>
+    <p id="TokyoTime"></p>
+    <p id="NewYorkTime"></p>
+</body>
+
+<script>
+    setInterval(()=>{
+        let crrDate = new Date()
+        document.getElementById("crrTime").innerText = "Current Time : " + crrDate.toLocaleString()
+        document.getElementById("LondonTime").innerText = "London Time : " + crrDate.toLocaleTimeString('en-US',{timeZone : "Europe/London"})
+        document.getElementById("TokyoTime").innerText = "Tokyo Time : " + crrDate.toLocaleTimeString('en-US',{timeZone : "Asia/Tokyo"})
+        document.getElementById("NewYorkTime").innerText = "New York Time : " + crrDate.toLocaleTimeString('en-US',{timeZone : "America/New_York"})
+    },1000)    
+</script>
+</html>

@@ -1,0 +1,102 @@
+Country,State/Region,City
+India,Gujarat,Ahmedabad
+India,Gujarat,Surat
+India,Gujarat,Vadodara
+India,Maharashtra,Mumbai
+India,Maharashtra,Pune
+India,Maharashtra,Nagpur
+India,Karnataka,Bangalore
+India,Karnataka,Mysore
+India,Tamil Nadu,Chennai
+India,Tamil Nadu,Coimbatore
+India,Delhi,New Delhi
+United States,California,Los Angeles
+United States,California,San Francisco
+United States,California,San Diego
+United States,Texas,Houston
+United States,Texas,Dallas
+United States,Texas,Austin
+United States,New York,New York City
+United States,Florida,Miami
+United States,Florida,Orlando
+United States,Illinois,Chicago
+Canada,Ontario,Toronto
+Canada,Ontario,Ottawa
+Canada,Quebec,Montreal
+Canada,Quebec,Quebec City
+Canada,British Columbia,Vancouver
+Canada,Alberta,Calgary
+Canada,Alberta,Edmonton
+United Kingdom,England,London
+United Kingdom,England,Manchester
+United Kingdom,England,Birmingham
+United Kingdom,Scotland,Edinburgh
+United Kingdom,Scotland,Glasgow
+United Kingdom,Wales,Cardiff
+United Kingdom,Northern Ireland,Belfast
+Australia,New South Wales,Sydney
+Australia,Victoria,Melbourne
+Australia,Queensland,Brisbane
+Australia,Western Australia,Perth
+Germany,Bavaria,Munich
+Germany,Bavaria,Nuremberg
+Germany,North Rhine-Westphalia,Cologne
+Germany,North Rhine-Westphalia,Düsseldorf
+Germany,Berlin,Berlin
+France,Île-de-France,Paris
+France,Provence-Alpes-Côte d’Azur,Marseille
+France,Provence-Alpes-Côte d’Azur,Nice
+France,Auvergne-Rhône-Alpes,Lyon
+China,Guangdong,Guangzhou
+China,Guangdong,Shenzhen
+China,Beijing,Beijing
+China,Shanghai,Shanghai
+China,Sichuan,Chengdu
+Japan,Tokyo,Tokyo
+Japan,Osaka,Osaka
+Japan,Kanagawa,Yokohama
+Japan,Aichi,Nagoya
+Brazil,São Paulo,São Paulo
+Brazil,Rio de Janeiro,Rio de Janeiro
+Brazil,Minas Gerais,Belo Horizonte
+South Africa,Gauteng,Johannesburg
+South Africa,Gauteng,Pretoria
+South Africa,Western Cape,Cape Town
+South Africa,KwaZulu-Natal,Durban
+Russia,Moscow,Moscow
+Russia,Saint Petersburg,Saint Petersburg
+Russia,Novosibirsk,Novosibirsk
+Mexico,Mexico City,Mexico City
+Mexico,Jalisco,Guadalajara
+Mexico,Nuevo León,Monterrey
+Italy,Lombardy,Milan
+Italy,Lazio,Rome
+Italy,Campania,Naples
+Spain,Madrid,Madrid
+Spain,Catalonia,Barcelona
+Spain,Andalusia,Seville
+Netherlands,North Holland,Amsterdam
+Netherlands,South Holland,Rotterdam
+Netherlands,Utrecht,Utrecht
+Singapore,Singapore,Singapore
+United Arab Emirates,Dubai,Dubai
+United Arab Emirates,Abu Dhabi,Abu Dhabi
+United Arab Emirates,Sharjah,Sharjah
+Saudi Arabia,Riyadh,Riyadh
+Saudi Arabia,Makkah,Mecca
+Saudi Arabia,Eastern Province,Dammam
+Turkey,Istanbul,Istanbul
+Turkey,Ankara,Ankara
+Turkey,Izmir,Izmir
+Indonesia,Jakarta,Jakarta
+Indonesia,West Java,Bandung
+Indonesia,East Java,Surabaya
+South Korea,Seoul,Seoul
+South Korea,Busan,Busan
+South Korea,Incheon,Incheon
+Argentina,Buenos Aires,Buenos Aires
+Argentina,Córdoba,Córdoba
+Argentina,Santa Fe,Rosario
+Nigeria,Lagos,Lagos
+Nigeria,Abuja,Abuja
+Nigeria,Kano,Kano

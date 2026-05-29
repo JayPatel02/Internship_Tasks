@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Profile - <%= profileDetails?.userName %>
+    </title>
+    <link rel="stylesheet" href="/CSS/homePage.css">
+    <link rel="stylesheet" href="/CSS/editProfile.css">
+    <link rel="stylesheet" href="/CSS/followFollowing.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <%- include("navBar") %>
+            <main class="feed">
+                <div class="header">
+                    <h2>
+                        <%= profileDetails?.userName %>
+                    </h2>
+                    <span style="color: var(--text-light); font-size: 0.9rem;">
+                        <%= tweetCount ? tweetCount : 0 %> Tweets
+                    </span>
+                </div>
+                <div class="profile-header" style="border-bottom: 1px solid var(--border);">
+                    <div class="banner" style="height: 200px; background: #CFD9DE;">
+                        <img src="/<%= profileDetails.coverPic ? profileDetails?.coverPic : 'uploads/defaultPhotos/coverPhoto.png' %>" alt="Cover Photo"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 15px; position: relative;">
+                        <div class="avatar"
+                            style="width: 120px; height: 120px; border: 4px solid rgb(255, 255, 255); position: absolute; top: -60px; background: #ccc;">
+                            <img src="/<%= profileDetails.profilePic ? profileDetails?.profilePic : 'uploads/defaultPhotos/avtarPhoto.png' %>" alt="Avatar"
+                                style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;" >
+                        </div>
+                        <% if(profileDetails.userName==userToken.userName){ %>
+                            <div style="text-align: right;">
+                                <button class="edit-btn" style="margin-top: 0; padding: 8px 16px;"
+                                    onclick="openEditProfile()">Edit profile</button>
+                                <button class="edit-btn" style="margin-top: 0; padding: 8px 16px; margin-left: 10px;"
+                                    onclick="openChangePassword()">Change Password</button>
+                            </div>
+                            <% } else {%>
+                                <div style="text-align: right;">
+                                    <form
+                                        action="/user/updateFollower/<%= profileDetails.userName %>/<%= isFollowing ? 'Unfollow' : 'Follow' %>"
+                                        method="POST">
+                                        <button type="submit" class="edit-btn"
+                                            style="margin-top: 0; padding: 8px 16px;">
+                                            <%= isFollowing ? 'Unfollow' : 'Follow' %>
+                                        </button>
+                                    </form>
+                                </div>
+                                <% } %>
+                                    <div style="margin-top: 40px;">
+                                        <h2 style="margin-bottom: 2px;">
+                                            <%= profileDetails.firstName %>
+                                                <%= profileDetails.lastName %>
+                                        </h2>
+                                        <p style="color: var(--text-light); margin-bottom: 12px;">@<%=
+                                                profileDetails.userName %>
+                                        </p>
+
+                                        <% if (profileDetails.bio) { %>
+                                            <p style="margin-bottom: 12px; line-height: 1.4;">
+                                                <%= profileDetails.bio %>
+                                            </p>
+                                            <% } %>
+                                                <div
+                                                    style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 12px; display: flex; align-items: center; gap: 5px;">
+                                                    Joined <span class="dateFormater" data-timestamp="<%= profileDetails.created_at %>"></span>
+                                                </div>
+
+                                                <div style="display: flex; gap: 20px; font-size: 0.95rem;">
+                                                    <a style="text-decoration: none; color: var(--text); cursor: pointer;"
+                                                        onclick="openFollowFollowingDisplay('followers' , '<%= profileDetails.userName %>')">
+                                                        <span style="font-weight: bold;">
+                                                            <%= followersCount || 0 %>
+                                                        </span>
+                                                        <span style="color: var(--text-light);">Followers</span>
+                                                    </a>
+                                                    <a style="text-decoration: none; color: var(--text);cursor: pointer;"
+                                                        onclick="openFollowFollowingDisplay('following','<%= profileDetails.userName %>')">
+                                                        <span style="font-weight: bold;">
+                                                            <%= followingCount || 0 %>
+                                                        </span>
+                                                        <span style="color: var(--text-light);">Following</span>
+                                                    </a>
+                                                </div>
+                                    </div>
+
+                    </div>
+                </div>
+
+                <div class="profile-tabs"
+                    style="display: flex; border-bottom: 1px solid var(--border); margin-top: 10px;">
+                    <div class="tab active" onclick="switchTab('posts')" id="posts-tab"
+                        style="flex: 1; text-align: center; padding: 15px; cursor: pointer; font-weight: bold;">
+                        Tweets
+                    </div>
+                    <div class="tab" onclick="switchTab('reposts')" id="reposts-tab"
+                        style="flex: 1; text-align: center; padding: 15px; cursor: pointer; color: var(--text-light);">
+                        Reposts
+                    </div>
+                </div>
+
+                <div id="posts-container">
+                    <% if(profileTweets.length> 0) { %>
+                        <% profileTweets.forEach(element=> { %>
+                            <div class="tweet-card">
+                                <div class="avatar">
+                                    <img src="/<%= element.profilePic ? element.profilePic : "uploads/defaultPhotos/avtarPhoto.png" %>" alt=""
+                                        style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                                </div>
+
+                                <div class="tweet-main">
+                                    <div class="tweet-header">
+                                        <span class="name">
+                                            <%= element.firstName %>
+                                                <%= element.lastName %>
+                                        </span>
+                                        <span class="username">@<%= element.userName %></span>
+                                        <span class="dot">·</span>
+                                        <span class="username dateFormater" data-timestamp="<%= element.updated_at %>"></span>
+                                    </div>
+
+                                    <div class="tweet-content">
+                                        <%= element.tweetContent %>
+                                            <div>
+                                                <% if(element.tweetImg){ %>
+                                                    <img src="/<%= element.tweetImg %>" alt="Tweet Image"
+                                                        style="width: 100%;max-height: 400px; object-fit: contain;border-radius: 10px; margin-top: 10px;">
+                                                    <% } %>
+                                            </div>
+                                    </div>
+
+                                    <div class="tweet-actions">
+                                        <% const uniqueCommentId = (element.type === "retweet" ? "retweet-" : "orginal-") + element.tweet_id %>
+                                        <div class="action-item" onclick="handleComment('<%= uniqueCommentId %>')">
+                                            💬 <span id="commentCount:<%= uniqueCommentId %>"><%= element.commentCount ? element.commentCount : 0 %></span>
+                                        </div>
+                                        <div class="action-item"
+                                            onclick="handleRetweet('<%= element.tweet_id %>')">
+                                            🔄 <span><%= element.retweetCount ? element.retweetCount : 0 %></span>
+                                        </div>
+                                        <div class="action-item" onclick="handleLike('<%= uniqueCommentId %>')">
+                                           <span id="likeIcon:<%= uniqueCommentId %>" ><%= element.isLiked ? "❤️" : "🤍" %></span> <span id="like:<%= uniqueCommentId %>"><%= element.likeCount ? element.likeCount : 0 %></span>
+                                        </div>
+                                        <div class="action-item" onclick="handleShare('<%= element.tweet_id %>')">🔗</div>
+                                        <% if(element.userName == user.userName) {%>
+                                            <div class="action-item" onclick="handleDelete('<%= element.tweet_id %>')">🗑️</div>
+                                        <% } %>
+                                    </div>
+                                    <div id="commentSection:<%= uniqueCommentId %>" style="display: none; margin-top: 15px;">
+                                        <form style="display: flex; gap: 10px;">
+                                            <input type="text" id="commentInput:<%= uniqueCommentId %>" placeholder="Write a comment..." style="width: 100%; padding: 8px; border-radius: 20px; border: 1px solid #ccc;">
+                                            <button type="button" onclick="postComment('<%= uniqueCommentId %>')" style="background: var(--primary); color: white; border: none; padding: 8px 20px; border-radius: 20px; font-weight: 600; cursor: pointer;">Comment</button>
+                                        </form>
+                                         <div id="commentsContainer:<%= uniqueCommentId %>" style="margin-top: 10px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <% }); %>
+                                <% } else { %>
+                                    <div class="tweet-card">
+                                        <p style="text-align: center; color: var(--text-light); padding: 40px;">No
+                                            tweets yet.</p>
+                                    </div>
+                                    <% } %>
+                </div>
+
+                <div id="reposts-container" style="display: none;">
+                    <% if(profileRetweets.length> 0) { %>
+                        <% profileRetweets.forEach(element=> { %>
+                            <div>
+                                <% if (element.type==='retweet' ) { %>
+                                    <p style="color: gray; font-size: 13px; margin: 15px;">
+                                        @<%= element.retweeterName %> Reposted
+                                    </p>
+                                    <% } %>
+                            </div>
+                            <div class="tweet-card">
+                                <div class="avatar">
+                                    <img src="/<%= element.profilePic ? element.profilePic : "uploads/defaultPhotos/avtarPhoto.png" %>" alt=""
+                                        style="width: 100%;max-height: 400px; object-fit: contain; border-radius: 50%;">
+                                </div>
+
+                                <div class="tweet-main">
+                                    <div class="tweet-header">
+                                        <span class="name">
+                                            <%= element.firstName %>
+                                                <%= element.lastName %>
+                                        </span>
+                                        <span class="username">@<%= element.userName %></span>
+                                        <span class="dot">·</span>
+                                        <span class="username dateFormater" data-timestamp="<%= element.updated_at %>"></span>
+                                    </div>
+
+                                    <div class="tweet-content">
+                                        <%= element.tweetContent %>
+                                            <div>
+                                                <% if(element.tweetImg){ %>
+                                                    <img src="/<%= element.tweetImg %>" alt="Tweet Image"
+                                                        style=" max-height: 400px; object-fit: cover; border-radius: 10px; margin-top: 10px;">
+                                                    <% } %>
+                                            </div>
+                                    </div>
+
+                                    <div class="tweet-actions">
+                                        <% const uniqueCommentId = (element.type === "retweet" ? "retweet-" : "orginal-") + element.tweet_id %>
+                                        <div class="action-item" onclick="handleComment('<%= uniqueCommentId %>')">
+                                            💬 <span id="commentCount:<%= uniqueCommentId %>"><%= element.commentCount ? element.commentCount : 0 %></span>
+                                        </div>
+                                        <div class="action-item"
+                                            onclick="handleRetweet('<%= element.tweet_id %>')">
+                                            🔄 <span><%= element.retweetCount ? element.retweetCount : 0 %></span>
+                                        </div>
+                                        <div class="action-item" onclick="handleLike('<%= uniqueCommentId %>')">
+                                           <span id="likeIcon:<%= uniqueCommentId %>" ><%= element.isLiked ? "❤️" : "🤍" %></span> <span id="like:<%= uniqueCommentId %>"><%= element.likeCount ? element.likeCount : 0 %></span>
+                                        </div>
+                                        <div class="action-item" onclick="handleShare('<%= element.tweet_id %>')">🔗</div>
+                                        <% if(element.userName == user.userName) {%>
+                                            <div class="action-item" onclick="handleDelete('<%= element.tweet_id %>')">🗑️</div>
+                                        <% } %>
+                                    </div>
+                                    <div id="commentSection:<%= uniqueCommentId %>" style="display: none; margin-top: 15px;">
+                                        <form style="display: flex; gap: 10px;">
+                                            <input type="text" id="commentInput:<%= uniqueCommentId %>" placeholder="Write a comment..." style="width: 100%; padding: 8px; border-radius: 20px; border: 1px solid #ccc;">
+                                            <button type="button" onclick="postComment('<%= uniqueCommentId %>')" style="background: var(--primary); color: white; border: none; padding: 8px 20px; border-radius: 20px; font-weight: 600; cursor: pointer;">Comment</button>
+                                        </form>
+                                         <div id="commentsContainer:<%= uniqueCommentId %>" style="margin-top: 10px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <% }); %>
+                                <% } else { %>
+                                    <div class="tweet-card">
+                                        <p style="text-align: center; color: var(--text-light); padding: 40px;">No
+                                            Reposts yet.</p>
+                                    </div>
+                                    <% } %>
+                </div>
+
+            </main>
+
+            <div id="editDiv" class="modal-overlay" style="display: none;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button onclick="closeEditProfile()" class="close-btn">✕</button>
+                        <h3>Edit Profile</h3>
+                        <button form="editProfileForm" type="button" onclick="handleUpdateProfile()" class="save-btn">Save</button>
+                    </div>
+
+                    <form id="editProfileForm" enctype="multipart/form-data">
+                        <div class="input-group">
+                            <label>Cover Photo</label>
+                            <input type="file" name="coverPhoto" accept="image/*">
+                        </div>
+                        <div class="input-group">
+                            <label>Avtar Photo</label>
+                            <input type="file" name="avatarPhoto" accept="image/*">
+                        </div>
+                        <div class="input-group">
+                            <label>First Name</label>
+                            <input type="text" name="firstName" class="valstr"
+                                value="<%= profileDetails.firstName ? profileDetails.firstName : '' %>">
+                        </div>
+                        <div class="input-group">
+                            <label>Last Name</label>
+                            <input type="text" name="lastName" class="valstr"
+                                value="<%= profileDetails.lastName ? profileDetails.lastName : '' %>">
+                        </div>
+                        <div class="input-group">
+                            <label>Bio</label>
+                            <textarea name="bio" rows="3"
+                                placeholder="Add your bio..."><%= profileDetails.bio ? profileDetails.bio : '' %></textarea>
+                        </div>
+                        <small id="fileSizeErr" style="color: red; display: none;margin: 5px;"></small>
+                    </form>
+                </div>
+            </div>
+
+            <div id="changePasswordDiv" class="modal-overlay" style="display: none;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button onclick="closeChangePassword()" class="close-btn">✕</button>
+                        <h3>Change Password</h3>
+                    </div>
+
+                    <form id="changePasswordForm">
+                        <div class="input-group">
+                            <label>Current Password <span style="color: red;">*</span></label>
+                            <input type="password" name="currentPassword" id="currentPass">
+                        </div>
+                        <div class="input-group">
+                            <label>New Password <span style="color: red;">*</span></label>
+                            <input type="password" name="newPassword" id="pass">
+                        </div>
+                        <small id="passErr" style="color: red; display: none;margin: 5px;">Same as current password</small>
+                        <div class="input-group">
+                            <label>Confirm New Password <span style="color: red;">*</span></label>
+                            <input type="password" name="confirmPassword" id="confPass" required>
+                        </div>
+                        <button type="button" class="save-btn" onclick="changePassword()">Change Password</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="followFollowingDisplay" class="modal-overlay" style="display: none;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button onclick="closeFollowFollowingDisplay()" class="close-btn">✕</button>
+                        <h3 style="font-weight: 700;">People</h3>
+                    </div>
+
+                    <div class="modal-tabs">
+                        <div class="tab-item active" id="followersTab" onclick="switchFollowModel('followers','<%= profileDetails.userName %>')">Followers</div>
+                        <div class="tab-item" id="followingTab" onclick="switchFollowModel('following','<%= profileDetails.userName %>')">Following</div>
+                    </div>
+
+                    <div id="userListContainer" class="user-list">
+                    </div>
+                </div>
+            </div>
+
+
+    </div>
+    <script>const userName = "<%= user.userName %>";</script>
+    <script src="/JS/formateDate.js"></script>
+    <script src="/JS/validations/validation.js"></script>
+    <script src="/JS/userPages/profilePage.js"></script>
+    <script src="/JS/userPages/actionButtons.js"></script>
+</body>
+
+</html>

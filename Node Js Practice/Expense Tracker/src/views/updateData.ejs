@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="expDetail">Expense Description</label>
+    <input type="text" id="expDetail" value="<%= data[0].expDescription %>">
+
+    <label for="expAmount">Amount</label>
+    <input type="text" id="expAmount" value=<%= data[0].expAmount %>>
+
+    <button type="button" onclick="handleData()">Submit</button>
+</body>
+<script>
+
+    function valDes(input) {
+        const pattern = /^[a-zA-Z\s]+$/
+        if (pattern.test(input)) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    function valAmt(input) {
+        const pattern = /^[0-9]+(\.\d{1,2})?$/
+        if (pattern.test(input)) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    async function handleData() {
+        const expDet = document.getElementById("expDetail").value
+        const expAmt = document.getElementById("expAmount").value
+
+        if (valDes(expDet) && valAmt(expAmt)) {
+            let res = await fetch(`/updateData/<%= data[0].expenseId %>`, {
+                method: "put",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ expDet: expDet, expAmt: expAmt })
+            })
+            if (res) {
+                window.location.href = "/listData"
+            }
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/pagination.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="searchBar" style="width: 100%;">
+            <form id="searchForm" style="display: flex;gap: 1vmin;">
+                <input type="text" id="searchString" name="searchString" placeholder="Search Here...." style="height: 3vmin;">
+                <select id="condition" name="condition" style="height: 3vmin;width: 6vmin;text-align: center;">
+                    <option value="AND" selected>AND</option>
+                    <option value="OR">OR</option>
+                </select>
+                <!-- <button type="submit" id="searchBtn">Go</button> -->
+                <div style="background-color: rgb(204, 196, 196);height: 3vmin;width: fit-content;text-align: center;padding: 0.5vmin;padding-top: 0.5vmin;border-radius: 5px;">
+                    <a href="javascript:void(0)" onclick="handleSearch()" id="searchBtn" style="text-decoration: none;color: black;">Search</a>
+                </div>
+            </form>
+            <h1 style="margin-left: 50vmin;">User Data</h1>
+        </div>
+        <div id="displayData">
+            <table>
+                <thead>
+                    <th>
+                        <a
+                            href="?page=<%= 1 %>&sortBy=student_id&sortOrder=<%= sortBy === 'student_id' && sortOrder === 'ASC' ? 'DESC' : 'ASC' %>&searchString=<%= searchStr %>&condition=<%= searchCondition %>">
+                            Student Id
+                            <i class="fa-solid fa-sort-down"></i>
+                        </a>
+                    </th>
+                    <th>
+                        <a
+                            href="?page=<%= 1 %>&sortBy=fullName&sortOrder=<%= sortBy === 'fullName' && sortOrder === 'ASC' ? 'DESC' : 'ASC' %>&searchString=<%= searchStr %>&condition=<%= searchCondition %>">
+                            Full Name
+                        </a>
+                    </th>
+                    <th>Email</th>
+                    <th>
+                        <a
+                            href="?page=<%= 1 %>&sortBy=dateOfBirth&sortOrder=<%= sortBy === 'dateOfBirth' && sortOrder === 'ASC' ? 'DESC' : 'ASC' %>&searchString=<%= searchStr %>&condition=<%= searchCondition %>">
+                            Date Of Birth
+                        </a>
+                    </th>
+                    <th>Contact</th>
+                    <th>Address</th>
+                    <th>
+                        <a
+                            href="?page=<%= 1 %>&sortBy=city&sortOrder=<%= sortBy === 'city' && sortOrder === 'ASC' ? 'DESC' : 'ASC' %>&searchString=<%= searchStr %>&condition=<%= searchCondition %>">
+                            City
+                        </a>
+                    </th>
+                    <th>Gender</th>
+                    <th></th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <% if(rows === null || rows.length == 0 ) { %>
+                        <tr><td colspan="10" style="text-align: center;font-size: large;">No Records Found!</td></tr>
+                    <% } else { %>
+                        <% rows.forEach((row)=> { %>
+                            <tr>
+                                <td>
+                                    <%= row.student_id %>
+                                </td>
+                                <td>
+                                    <% if (update_id===row.student_id) { %>
+                                        <input type="text" id="firstName" name="firstName" value="<%= row.firstName %>">
+                                        <input type="text" id="lastName" name="lastName" value="<%= row.lastName %>">
+                                    <% } else { %>
+                                        <%= row.firstName+ " " + row.lastName %>
+                                    <% } %>
+                                </td>
+                                <td>
+                                    <%= row.email %>
+                                </td>
+                                <td>
+                                    <%= row.dateOfBirth.toISOString().split('T')[0] %>
+                                </td>
+                                <td>
+                                    <%= row.contact %>
+                                </td>
+                                <td>
+                                    <%= row.stdAddress %>
+                                </td>
+                                <td>
+                                    <%= row.city %>
+                                </td>
+                                <td>
+                                    <%= row.gender %>
+                                </td>
+                                <td>
+                                    <% if(update_id===row.student_id){ %>
+                                        <a href="javascript:void(0)" onclick="handleSave('<%= row.student_id%>')"id="saveBtn">Save</a>
+                                        <% }else{ %>
+                                        <a href="?page=<%= currentPage %>&sortBy=<%= sortBy %>&sortOrder=<%= sortOrder %>&update_id=<%= row.student_id %>&searchString=<%= searchStr %>&condition=<%= searchCondition %>"id="updateBtn">Update</a>
+                                    <% } %>
+                                </td>
+                                <td><a href="?page=<%= currentPage %>&sortBy=<%= sortBy %>&sortOrder=<%= sortOrder %>&delete_id=<%= row.student_id %>&searchString=<%= searchStr %>&condition=<%= searchCondition %>"id="deleteBtn">Delete</a></td>
+                            </tr>
+                        <% }); %>
+                    <% } %>
+                    
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination" id="pagination">
+            <a href="?page=<%= 1 %>&sortBy=<%= sortBy %>&sortOrder=<%= sortOrder %>&searchString=<%= searchStr %>&condition=<%= searchCondition %>"
+                class="activeBtn <%= currentPage === 1 ? 'disabledBtn' : '' %>">&lt;&lt;</a>
+
+            <a href="?page=<%= previousPage %>&sortBy=<%= sortBy %>&sortOrder=<%= sortOrder %>&searchString=<%= searchStr %>&condition=<%= searchCondition %>"
+                class="activeBtn <%= currentPage === 1 ? 'disabledBtn' : '' %>">&lt;</a>
+
+            <a href="?page=<%= currentPage %>&sortBy=<%= sortBy %>&sortOrder=<%= sortOrder %>&searchString=<%= searchStr %>&condition=<%= searchCondition %>" class="activeBtn">
+                <%= currentPage %>
+            </a>
+
+            <a href="?page=<%= nextPage %>&sortBy=<%= sortBy %>&sortOrder=<%= sortOrder %>&searchString=<%= searchStr %>&condition=<%= searchCondition %>"
+                class="activeBtn <%= currentPage === totalPage ? 'disabledBtn' : '' %>">&gt;</a>
+
+            <a href="?page=<%= totalPage%>&sortBy=<%= sortBy %>&sortOrder=<%= sortOrder %>&searchString=<%= searchStr %>&condition=<%= searchCondition %>"
+                class="activeBtn <%= currentPage === totalPage ? 'disabledBtn' : '' %>">&gt;&gt;</a>
+        </div>
+    </div>
+    <script>
+        function handleSave(studentId) {
+            const newFN = document.getElementById("firstName").value
+            const newLN = document.getElementById("lastName").value
+
+            const url = `?page=<%= currentPage %>&sortBy=<%= sortBy %>&sortOrder=<%= sortOrder %>&save_id=${studentId}&firstN=${encodeURIComponent(newFN)}&lastN=${encodeURIComponent(newLN)}`;
+
+            window.location.href = url
+        }
+
+        function handleSearch(){
+            let searchStr = document.getElementById("searchString").value
+            let condition = document.getElementById("condition").value
+
+            window.location.href = `/?page=<%= currentPage %>&sortBy=<%= sortBy %>&sortOrder=<%= sortOrder %>&searchString=${encodeURIComponent(searchStr)}&condition=${encodeURIComponent(condition)}`
+            
+            if(searchStr == ""){
+                document.getElementById("searchBtn").innerText = "Reset"
+            }else{
+                document.getElementById("searchBtn").innerText = "Search"
+            }
+        }
+    </script>
+</body>
+
+</html>

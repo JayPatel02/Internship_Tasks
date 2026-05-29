@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="display: flex;justify-content: center;margin: 6vmin auto;">
+        <fieldset style="width: 30%;">
+            <legend>Register</legend>
+
+            <div style="display: flex;flex-direction: column;width: 80%;margin: 2vmin auto;">
+                <label for="firstn">First Name:</label>
+                <span id="spanFN" style="display: none;">Invalid First Name</span>
+                <input type="text" id="firstn" name="firstName" class="valstr">
+            </div>
+
+            <div style="display: flex;flex-direction: column;width: 80%;margin: 2vmin auto;">
+                <label for="lastn">Last Name:</label>
+                <span id="spanLN" style="display: none;">Invalid Last Name</span>
+                <input type="text" id="lastn" name="lastName" class="valstr">
+            </div>
+
+            <div style="display: flex;flex-direction: column;width: 80%;margin: 2vmin auto;">
+                <label for="email">Email:</label>
+                <span id="spanEM" style="display: none;">Invalid Email / Already Exist.</span>
+                <input type="text" id="email" name="email">
+            </div>
+
+            <div style="display: flex;flex-direction: column;width: 80%;margin: 2vmin auto;">
+                <label for="pass">Password:</label>
+                <small id="spanPass" style="display: none;">Password must be of 8 charcters and must includes one
+                    capital letter , one small letter and on special symbol(@,$,!,%,*,?,&).</small>
+                <input type="password" id="pass" name="password">
+            </div>
+
+            <div style="display: flex;flex-direction: column;width: 80%;margin: 2vmin auto;">
+                <label for="confPass">Confirm Password:</label>
+                <span id="spanConfPass" style="display: none;">Does not Match.</span>
+                <input type="text" id="confPass">
+            </div>
+
+            <div style="display: flex;flex-direction: column;width: 80%;margin: 2vmin auto;">
+                <span id="userExistMes" style="display: none;color: red;">Email Already Exist.</span>
+            </div>
+
+            <div style="display: flex;width: 80%;margin: 2vmin auto;">
+                <%- data %>
+                <input type="text" id="captchaInput" name="captchaInput" style="width: 30%;">
+            </div>
+
+            <div style="display: flex;width: fit-content;margin: 2vmin auto;gap: 4vmin;">
+                <button type="button" id="regBtn" onclick="handleRegister()">Register</button>
+                <a href="/login" style="font-size: small;">Already a user.Want to login?</a>
+            </div>
+
+        </fieldset>
+    </div>
+    <script src="/JS/validation.js"></script>
+    <script>
+        async function handleRegister() {
+            const chkEmail = await checkEmail()
+            if (validateStr() && validatePass() && comparePass() && valEmail() && chkEmail) {
+                console.log("inside")
+                const res = await fetch("/register", {
+                    method: "post",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ firstName: strs[0].value, lastName: strs[1].value, email: email.value, currpass: currpassword.value , userInput: userInput.value})
+                })
+                if (res.status == 200) {
+                    window.location.href = "/login"
+                }
+                if (res.status == 400){
+                    window.location.reload()
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

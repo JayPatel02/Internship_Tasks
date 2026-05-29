@@ -1,0 +1,119 @@
+/* followModal.css */
+
+/* Dark Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Above everything */
+}
+
+/* Modal Box */
+.modal-content {
+    background: var(--bg);
+    width: 100%;
+    max-width: 600px;
+    height: 80vh;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Header */
+.modal-header {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 30px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.close-btn:hover { background: var(--hover); }
+
+/* Tabs */
+.modal-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+}
+
+.tab-item {
+    flex: 1;
+    text-align: center;
+    padding: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--text-light);
+    position: relative;
+}
+
+.tab-item:hover { background: var(--hover); }
+
+.tab-item.active {
+    color: var(--text);
+}
+
+.tab-item.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+/* User List */
+.user-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Reuse your existing search-result-item styles or use this for consistency */
+.user-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.user-item:hover { background: var(--hover); }
+
+.user-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name { font-weight: 700; color: var(--text); }
+.user-handle { color: var(--text-light); font-size: 0.9rem; }

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Reset and shared background */
+        body {
+            margin: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        /* Refined Table Container */
+        .table-container {
+            margin: 2rem auto;
+            width: 80vw;
+            height: 75vh;
+            overflow-x: auto;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            text-align: center;
+        }
+
+        /* Header Styling - Matching the Navbar Slate/Blue tones */
+        .data-table thead tr {
+            background-color: #f1f5f9;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .data-table th {
+            padding: 16px 24px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+            color: #64748b;
+        }
+
+        .data-table td {
+            padding: 16px 24px;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #f1f5f9;
+            color: #334155;
+        }
+
+        /* Hover effect for rows */
+        .data-table tbody tr:hover {
+            background-color: #f8fafc;
+            transition: background-color 0.2s ease;
+        }
+
+        /* Role badge - Modern Style */
+        .role-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background-color: #dbeafe;
+            color: #1e40af;
+            text-transform: capitalize;
+        }
+
+        /* Delete button - Refined */
+        .btn-delete {
+            background-color: #fff1f2;
+            color: #e11d48;
+            border: 1px solid #fecdd3;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-delete:hover {
+            background-color: #e11d48;
+            color: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(225, 29, 72, 0.2);
+        }
+
+        /* Empty state alignment */
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('navbar') %>
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>IP</th>
+                        <th>EMAIL</th>
+                        <th>ACTION</th>
+                        <th>LEVEL</th>
+                        <th>MESSAGE</th>
+                        <th>TIMESTAMP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% logs.forEach( log=> { %>
+                        <tr>
+                            <td>
+                                <%= log.ip %>
+                            </td>
+                            <td>
+                                <%= log.email %>
+                            </td>
+                            <td>
+                                <%= log.action %>
+                            </td>
+                            <td>
+                                <%= log.level %>
+                            </td>
+                            <td>
+                                <%= log.message %>
+                            </td>
+                            <td>
+                                <%= new Date(log.timestamp).toLocaleString() %>  
+                            </td>
+                        </tr>
+                        <% }); %>
+                </tbody>
+            </table>
+        </div>
+</body>
+
+</html>

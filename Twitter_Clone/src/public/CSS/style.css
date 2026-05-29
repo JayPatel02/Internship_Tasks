@@ -1,0 +1,199 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #e6ecf0; /* Classic Twitter sky grey */
+    color: #14171a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2vmin;
+}
+
+/* Base Container */
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 5vmin 4vmin;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+/* Wider Container for Registration */
+.register-container {
+    max-width: 500px; 
+}
+
+h1 , h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 4vmin;
+    text-align: center;
+    color: #14171a;
+}
+
+/* Layout for First/Last Name */
+.name-row {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.name-row .input-group {
+    flex: 1;
+}
+
+/* Form Fields */
+.input-group {
+    margin-bottom: 2.5vmin;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #657786;
+}
+
+input[type="text"],
+input[type="password"] {
+    background: #fff;
+    border: 1px solid #e6ecf0;
+    border-radius: 6px;
+    padding: 12px;
+    color: #14171a;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.2s;
+}
+
+input:focus {
+    border-color: #1da1f2;
+    box-shadow: 0 0 0 2px rgba(29, 161, 242, 0.1);
+}
+
+/* Messages */
+.error-msg {
+    color: #e0245e; /* Classic red */
+    font-size: 13px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.hint-msg {
+    color: #657786;
+    font-size: 12px;
+    margin-top: 5px;
+    line-height: 1.4;
+}
+
+/* Links & Checkbox */
+.remember-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 2vmin 0;
+    font-size: 14px;
+    color: #657786;
+}
+
+a {
+    color: #1da1f2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.forgot-link {
+    margin-top: 1vmin;
+}
+
+/* Classic Blue Button */
+#regBtn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 100px;
+    border: none;
+    background-color: #1da1f2;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 1vmin;
+    transition: background-color 0.2s;
+}
+
+#regBtn:hover {
+    background-color: #1a91da;
+}
+
+.signup-text {
+    text-align: center;
+    margin-top: 4vmin;
+    color: #657786;
+    font-size: 14px;
+}
+
+/* Timer Styling */
+#timerText {
+    text-align: center;
+    font-size: 14px;
+    color: #657786;
+    margin-bottom: 2vmin;
+}
+
+#timer {
+    font-weight: 700;
+    color: #1da1f2; /* Twitter Blue */
+}
+
+/* Secondary Button (Resend OTP) */
+#resendBtn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 100px;
+    border: 1px solid #1da1f2;
+    background-color: transparent;
+    color: #1da1f2;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 2vmin;
+    transition: all 0.2s;
+}
+
+#resendBtn:hover:not(:disabled) {
+    background-color: rgba(29, 161, 242, 0.1);
+}
+
+/* Disabled State for all buttons */
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    filter: grayscale(0.5);
+}
+
+/* If you want the Resend button hidden until needed, use this class */
+.hidden {
+    display: none;
+}
+
+
+/* Responsive fix for Name Row */
+@media (max-width: 480px) {
+    .name-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

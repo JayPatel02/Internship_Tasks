@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/CSS/homePage.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <%- include("navBar") %>
+
+            <div id="posts-container">
+                <% data.forEach(element=> { %>
+                    <div>
+                        <% if (element.type==='retweet' ) { %>
+                            <p style="color: gray; font-size: 13px; margin: 15px;">
+                                @<%= element.retweeterName %> Retweeted %>
+                            </p>
+                            <% } %>
+                    </div>
+                    <div class="tweet-card">
+                        <div class="avatar">
+                            <img src="/<%= element.profilePic ? element.profilePic : "uploads/defaultPhotos/avtarPhoto.png" %>" alt=""
+                            style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                        </div>
+                        <div class="tweet-main">
+                            <div class="tweet-header">
+                                <div onclick="window.location.href ='/user/profile/<%= element.userName %>'">
+                                    <span class="name">
+                                        <%= element.firstName %>
+                                            <%= element.lastName %>
+                                    </span>
+                                    <span class="username">@<%= element.userName %></span>
+                                </div>
+                                <span class="dot">·</span>
+                                <span class="username dateFormater" data-timestamp="<%= element.updated_at %>"></span>
+                            </div>
+
+                            <div class="tweet-content">
+                                <%= element.tweetContent %>
+                                    <div>
+                                        <% if(element.tweetImg){ %>
+                                            <img src="/<%= element.tweetImg %>" alt="Tweet Image"
+                                                style="width: 100%;max-height: 400px; object-fit: contain;border-radius: 10px; margin-top: 10px;">
+                                            <% } %>
+                                    </div>
+                            </div>
+
+                            <div class="tweet-actions">
+                                <% const uniqueCommentId=(element.type==="retweet" ? "retweet-" : "orginal-" ) +
+                                    element.tweet_id %>
+                                    <div class="action-item" onclick="handleComment('<%= uniqueCommentId %>')">
+                                        comment <span id="commentCount:<%= uniqueCommentId %>">
+                                            <%= element.commentCount ? element.commentCount : 0 %>
+                                        </span>
+                                    </div>
+                                    <div class="action-item" onclick="handleRetweet('<%= element.tweet_id %>')">
+                                        retweet <span>
+                                            <%= element.retweetCount ? element.retweetCount : 0 %>
+                                        </span>
+                                    </div>
+                                    <div class="action-item" onclick="handleLike('<%= uniqueCommentId %>')">
+                                        <span id="likeIcon:<%= uniqueCommentId %>">
+                                            <%= element.isLiked ? "❤️" : "🤍" %>
+                                        </span> <span id="like:<%= uniqueCommentId %>">
+                                            <%= element.likeCount ? element.likeCount : 0 %>
+                                        </span>
+                                    </div>
+                                    <div class="action-item" onclick="handleShare('<%= element.tweet_id %>')">
+                                        share</div>
+
+                                    <% if(element.userName==user.userName) {%>
+                                        <div class="action-item" onclick="handleDelete('<%= element.tweet_id %>')">
+                                            delete</div>
+                                        <% } %>
+                            </div>
+                            <div id="commentSection:<%= uniqueCommentId %>" style="display: none; margin-top: 15px;">
+                                <form style="display: flex; gap: 10px;">
+                                    <input type="text" id="commentInput:<%= uniqueCommentId %>"
+                                        placeholder="Write a comment..."
+                                        style="width: 100%; padding: 8px; border-radius: 20px; border: 1px solid #ccc;">
+                                    <button type="button" onclick="postComment('<%= uniqueCommentId %>')"
+                                        style="background: var(--primary); color: white; border: none; padding: 8px 20px; border-radius: 20px; font-weight: 600; cursor: pointer;">Comment</button>
+                                </form>
+                                <div id="commentsContainer:<%= uniqueCommentId %>" style="margin-top: 10px;"
+                                    class="commentsList">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <% }); %>
+            </div>
+            </main>
+
+            <aside class="sidebar-right">
+                <div class="search-box">
+                    <input type="text" id="searchString" placeholder="Search" autocomplete="off">
+                </div>
+                <div id="searchResults"></div>
+            </aside>
+    </div>
+    <script src="/JS/formateDate.js"></script>
+    <script src="/JS/userPages/homePage.js"></script>
+    <script src="/JS/userPages/actionButtons.js"></script>
+    <script src="/JS/userPages/searchUsername.js"></script>
+</body>
+
+</html>

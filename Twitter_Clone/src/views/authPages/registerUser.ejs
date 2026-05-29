@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Clone - Register</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+
+<body>
+    <div class="container register-container">
+        <form class="box">
+            <h1>Create your account</h1>
+
+            <div class="input-group">
+                <label for="userName">User Name</label>
+                <input type="text" id="userName" name="userName" placeholder="Enter user name">
+                <small id="spanUserName" class="hint-msg" style="display: none;">
+                    Must be 3-20 characters with only letters(A-z), numbers(0-9), and underscores(_).
+                </small>
+                <span id="spanUN" class="error-msg" style="display: none;">User name already exists.</span>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Email address">
+                <span id="spanEM" class="error-msg" style="display: none;">Invalid Email / Already exists.</span>
+            </div>
+
+            <div class="input-group">
+                <label for="fname">First Name</label>
+                <input type="text" class="valstr" id="fname" name="fname" placeholder="Enter first name">
+            </div>
+
+            <div class="input-group">
+                <label for="lname">Last Name</label>
+                <input type="text" class="valstr" id="lname" name="lname" placeholder="Enter last name">
+            </div>
+
+            <div class="input-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter phone number" maxlength="10">
+            </div>
+
+            <div class="input-group">
+                <label for="pass">Password</label>
+                <input type="password" id="pass" name="password" placeholder="Password">
+                <small id="spanPass" class="hint-msg" style="display: none;">
+                    Required 8-15 characters with at least 1 uppercase, 1 lowercase, 1 number and 1 symbol(@$!%*?&).
+                </small>
+            </div>
+
+            <div class="input-group">
+                <label for="confPass">Confirm Password</label>
+                <input type="password" id="confPass" name="confPass" placeholder="Repeat password">
+                <span id="spanMatch" class="error-msg" style="display: none;">Passwords do not match.</span>
+            </div>
+
+            <div class="input-group" style="display: flex;flex-direction: row;">
+                <%- data %>
+                <input type="text" id="captchaInput" name="captchaInput" style="width: 30%;">
+            </div>
+
+            <button type="button" id="regBtn" onclick="handleRegister()">Sign up</button>
+
+            <p class="signup-text">
+                Already have an account? <a href="/login">Log in</a>
+            </p>
+        </form>
+    </div>
+
+    <script src="/JS/validations/validation.js"></script>
+    <script src="/JS/authPages/registerPage.js"></script>
+</body>
+
+</html>

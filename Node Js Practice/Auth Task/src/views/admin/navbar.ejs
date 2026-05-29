@@ -1,0 +1,53 @@
+<style>
+    body {
+        margin: 0;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background-color: #f8fafc;
+    }
+
+    #navBar {
+        display: flex;
+        width: fit-content;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin: 2rem auto;
+        padding: 8px 12px;
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px; 
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    #navBar a {
+        text-decoration: none;
+        color: #64748b;
+        font-weight: 500;
+        font-size: 0.95rem;
+        padding: 10px 20px;
+        border-radius: 8px;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Modern Hover Effect */
+    #navBar a:hover {
+        background-color: #f1f5f9;
+        color: #0f172a; 
+    }
+
+    #navBar a.active {
+        background-color: #3b82f6;
+        color: #ffffff;
+    }
+
+    #navBar a:not(:last-child):after {
+        content: '';
+        margin-left: 12px;
+    }
+</style>
+
+<div id="navBar">
+    <a href="/admin">Home</a>
+    <a href="/admin/showUsers">Show Users</a>
+    <a href="/admin/logs">Show Logs</a>
+</div>

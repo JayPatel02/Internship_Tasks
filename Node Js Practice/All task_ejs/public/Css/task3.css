@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+}
+
+table{
+    width: 100%;
+    table-layout: fixed;
+    text-align: left;
+}
+td{
+    padding: 1vmin;
+}
+
+select {
+    height: 3vmin;
+    min-width: fit-content;
+    padding-left: 1vmin;
+    text-align: center;
+}
+
+fieldset {
+    margin: 1vmin;
+    padding: 1vmin;
+}
+
+#labZipcode{
+    margin-left: 2vmin;
+}
+
+#educationTbl{
+    text-align: center;
+}
+
+#educationTbl td{
+    border: 1px solid black;
+}
+
+#educationTbl input{
+    height: 3vmin;
+    width: 100%;
+    border: none;
+    text-align: center;
+}
+
+
+#compTbl{
+    text-align: center;
+}
+
+#compTbl td{
+    border: 1px solid black;
+}
+
+#compTbl input{
+    height: 3vmin;
+    width: 100%;
+    border: none;
+    text-align: center;
+}
+
+.addDeleteCell:hover{
+    cursor: pointer;
+}
+
+.button-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.error{
+    visibility: hidden;
+    color: red;
+}

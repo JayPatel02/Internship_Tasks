@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/dataEntries.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Applicants Data</h1>
+        <div id="displayData">
+            <table>
+                <thead>
+                    <th>Full Name</th>
+                    <th>Designation</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <% rows.forEach( row => { %>
+                        <tr>
+                            <td><%= row.first_name %> <%= row.last_name %></td>
+                            <td><%= row.designation %></td>
+                            <td><%= row.email %></td>
+                            <td><%= row.phone_number %></td>
+                            <td><a href="/view/<%= row.applicant_id %>" style="text-decoration: none; color: rgb(14, 125, 252); font-weight: bold;">View</a></td>
+                            <td><a href="/updateData?update=<%= row.applicant_id%>" style="text-decoration: none; color: rgb(67, 201, 34); font-weight: bold;">Update</a></td>
+                            <td><a href="/delete/<%= row.applicant_id%>" style="text-decoration: none; color:red; font-weight: bold;">Delete</a></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+        <div id="navBar">
+            <a href="?page=1">&lt;&lt;</a>
+            <a href="?page=<%= currentPage === 1 ? 1 : (currentPage - 1 )%>">&lt;</a>
+            <a href=""><%= currentPage %></a>
+            <a href="?page=<%= currentPage === totalPage ? totalPage : (currentPage + 1 )%>">&gt;</a>
+            <a href="?page=<%= totalPage %>">&gt;&gt;</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table tr,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 80%;display: flex;justify-content: center;margin: 4vmin auto;flex-direction: column;">
+        <div style="display: flex;justify-content: space-between;">
+            <input type="search" id="searchStr" placeholder="Search Here.....">
+            <button type="button" onclick=" window.location.href='/' ">Home</button>
+        </div>
+        <table style="width: 100%;text-align: center;">
+            <tr>
+                <td>Expense Description</td>
+                <td>Amount</td>
+                <td>Date</td>
+                <td style="border: none;"></td>
+                <td style="border: none;"></td>
+            </tr>
+            <% data.forEach( row=> { %>
+                <tr>
+                    <td>
+                        <%= row.expDescription %>
+                    </td>
+                    <td>
+                        <%= row.expAmount %>
+                    </td>
+                    <td>
+                        <%= row.created_at.toLocaleDateString('en-GB', { day: '2-digit' , month: '2-digit' ,
+                            year: 'numeric' }) %>
+                    </td>
+                    <td><button type="button" onclick="handleDelete('<%= row.expenseId %>')"
+                            style="margin: 0.5vmin;">Delete</button></td>
+                    <td><button type="button" onclick="handleUpdate('<%= row.expenseId %>')"
+                            style="margin: 0.5vmin;">Update</button></td>
+                </tr>
+                <% }); %>
+        </table>
+    </div>
+
+    <script>
+        async function handleDelete(id) {
+            const res = await fetch(`/delete/${id}`, {
+                method: "Delete",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+            if (res.status == 200) {
+                window.location.href = "/listData"
+            }
+        }
+
+        async function handleUpdate(id) {
+            window.location.href = `/update/${id}`
+        }
+    </script>
+
+</body>
+
+</html>

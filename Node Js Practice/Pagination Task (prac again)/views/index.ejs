@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/pagination.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Student Data</h1>
+        <div id="tableDisplay">
+            <table>
+                <thead>
+                    <th>
+                        <a href="/?page=<%= 1 %>&sortBy=student_id&sortOrder=<%= sortBy === "student_id" && sortOrder === 'ASC' ? 'DESC' :'ASC'%>">Id</a>
+                    </th>
+                    <th>
+                        <a href="/?page=<%= 1 %>&sortBy=fullName&sortOrder=<%= sortBy === "fullName" && sortOrder === 'ASC' ? 'DESC' :'ASC' %>">Full Name</a>
+                    </th>  
+                    <th>Email</th>
+                    <th>Date of Birth</th>
+                    <th>Phone Number</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                    <th>
+                        <a href="/?page=<%= 1 %>&sortBy=city&sortOrder=<%= sortBy === "city" && sortOrder === 'ASC' ? 'DESC' :'ASC' %>">City</a>
+                    </th>
+                </thead>
+                <tbody>
+                    <% rows.forEach( (row) => { %>
+                        <tr>
+                            <td><%= row.student_id %></td>
+                            <td><%= row.firstName %> <%= row.lastName %></td>
+                            <td><%= row.email %></td>
+                            <td><%= row.dateOfBirth.toISOString().split('T')[0] %></td>
+                            <td><%= row.contact %></td>
+                            <td><%= row.gender %></td>
+                            <td><%= row.stdAddress %></td>
+                            <td><%= row.city %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+        <div id="navBar">
+            <a href="/?page=<%= 1 %>&sortBy=<%= sortBy %>&sortOrder=<%= sortOrder %>" class="<%= currentPage == 1 ? "disActiveBtn" : "" %>">&lt;&lt;</a>
+            <a href="/?page=<%= previousPage %>&sortBy=<%= sortBy %>&sortOrder=<%= sortOrder %>" class="<%= currentPage == 1 ? "disActiveBtn" : "" %>" >&lt;</a>
+            <a href=""><%= currentPage %> of <%= totalPage %></a>
+            <a href="/?page=<%= nextPage %>&sortBy=<%= sortBy %>&sortOrder=<%= sortOrder %>" class="<%= currentPage == totalPage ? "disActiveBtn" : "" %>">&gt;</a>
+            <a href="/?page=<%= totalPage %>&sortBy=<%= sortBy %>&sortOrder=<%= sortOrder %>" class="<%= currentPage == totalPage ? "disActiveBtn" : "" %>">&gt;&gt;</a>
+        </div>
+    </div>
+</body>
+</html>

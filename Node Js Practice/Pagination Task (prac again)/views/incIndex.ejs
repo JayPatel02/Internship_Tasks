@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        table{
+            table-layout: fixed;
+        }
+        td{
+            border: 5px solid black;
+            padding: 2vmin;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <a href="/?page=<%= (currentPage !== 1) ? (currentPage - 1) : 1 %>">&lt;</a>
+            </td>
+            <td>
+                <a href="/?page=<%= 1 %>" <%= (currentPage === 1) ? 'style="font-weight: bold;background-color:coral;"' : "" %>>1</a>
+            </td>
+            <%
+                let startPage = Math.max(2,currentPage - 2)
+                let endPage = Math.min(totalPage-1,currentPage + 2)
+
+                if(startPage > 2) { %>
+                    <td>...</td>
+            <% } %>
+
+            <% for(let i = startPage; i <= endPage; i++) {%>
+                <td>
+                    <a href="/?page=<%= i %>" <%= (currentPage === i) ? 'style="font-weight: bold;background-color: coral;"' : "" %>> <%= i %> </a>
+                </td>
+            <% } %>
+
+            <% if(endPage < totalPage - 1) { %>
+                <td>...</td>
+            <% } %>
+            <td>
+                <a href="/?page=<%= totalPage %>" <%= (currentPage === totalPage) ? 'style="font-weight: bold;background-color: coral;"' : "" %>><%= totalPage %></a>
+            </td>
+            <td>
+                <a href="/?page=<%= currentPage + 1 %>">&gt;</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form class="box">
+            <h1>Log in to Twitter</h1>
+
+            <div class="input-group">
+                <label for="email">Email / User Name / Mobile Number</label>
+                <input type="text" id="email" name="email" placeholder="Enter email, username or mobile number" class="valnull">
+                <span id="userExistMes" class="error-msg" style="display: none;">User does not exist.</span>
+            </div>
+
+            <div class="input-group">
+                <label for="pass">Password</label>
+                <input type="password" id="pass" name="password" placeholder="Password" class="valnull">
+            </div>
+
+            <div class="input-group" style="display: flex;flex-direction: row;">
+                <%- data %>
+                <input type="text" id="captchaInput" name="captchaInput" style="width: 30%;">
+            </div>
+
+            <div class="remember-me-container">
+                <a href="/forgetPassword" class="forgot-link">Forgot password?</a>
+                <div class="remember-me">
+                    <input type="checkbox" name="isRemMe" id="rememberMe">
+                    <label for="rememberMe">Remember me</label>
+                </div>
+            </div>
+
+            <span id="invCreds" class="error-msg" style="display: none;">Invalid credentials.</span>
+
+            <button type="button" id="regBtn" onclick="handleLogin()">Log in</button>
+
+            <p class="signup-text">
+                New to Twitter? <a href="/register">Sign up now</a>
+            </p>
+        </form>
+    </div>
+
+
+    <script src="/JS/validations/validation.js"></script>
+    <script src="/JS/authPages/loginPage.js"></script>
+</body>
+
+</html>

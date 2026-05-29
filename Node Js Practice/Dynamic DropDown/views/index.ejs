@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p  style="display: inline;">Country</p>
+        <select name="country" id="country"  style="display: inline;width: 25vmin;"><option value="">-- Select Country --</option></select>
+        <p  style="display: inline;">State</p>
+        <select name="state" id="state"  style="display: inline;opacity: 0.3; width: 25vmin;pointer-events: none;"></select>
+        <p  style="display: inline;">City</p>
+        <select name="city" id="city"  style="display: inline;opacity: 0.3;width: 25vmin;pointer-events:none;"></select>
+    </div>
+    <script>
+        let selectedCon = document.getElementById("country")
+        let selectedState = document.getElementById("state")
+        let selectedCity = document.getElementById("city")
+
+        window.onload = async() =>{
+            let res = await fetch("/countries")
+            let countries = await res.json()
+            countries.forEach( ele => {
+                selectedCon.innerHTML += `<option value="${ele.country_id}">${ele.country_name}</option>`
+            });
+        }
+        selectedCon.addEventListener("change",async function (e){
+            let countryId = this.value
+            if(countryId == ""){
+                selectedState.style.opacity = 0.6
+                selectedState.style.pointerEvents = "none"
+                selectedState.innerHTML = ""
+                selectedCity.style.opacity = 0.6
+                selectedCity.style.pointerEvents = "none"
+                selectedCity.innerHTML = ""
+                return
+            }
+            let res = await fetch(`/state/${countryId}`)
+            let states = await res.json()
+            selectedState.style.opacity = 1
+            selectedState.style.pointerEvents = "visible"
+            
+            selectedState.innerHTML = `<option value="" selected>-- Select State --</option>`
+            states.forEach( ele => {
+                selectedState.innerHTML += `<option value="${ele.state_id}">${ele.state_name}</option>`
+            })
+        })
+        selectedState.addEventListener("change",async function (e){
+            let stateId = this.value
+            if(stateId == ""){
+                selectedCity.style.opacity = 0.6
+                selectedCity.style.pointerEvents = "none"
+                selectedCity.innerHTML = ""
+                return
+            }
+            let res = await fetch(`/cities/${stateId}`)
+            let cities = await res.json()
+            selectedCity.style.opacity = 1
+            selectedCity.style.pointerEvents = "visible"
+            selectedCity.innerHTML = `<option value="" selected>-- Select Country --</option>`
+            cities.forEach( ele => {
+                selectedCity.innerHTML += `<option value="${ele.city_id}">${ele.city_name}</option>`
+            })
+        })
+    </script>
+</body>
+</html>

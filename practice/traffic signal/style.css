@@ -1,0 +1,16 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    margin: 9vmin auto;
+    height: 80vmin;
+    width: 120vmin;
+    table-layout: fixed;
+    text-align: center;
+}
+
+tr,td{
+    border: 1px solid black;
+}

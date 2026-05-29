@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    background-color: azure;
+    height: 90vmin; 
+}
+
+.content{
+    height: 15vmin;
+    width: 15vmin;
+    margin: 1vmin;
+    background-color: aquamarine;
+}

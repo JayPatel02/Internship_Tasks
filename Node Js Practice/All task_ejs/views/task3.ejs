@@ -1,0 +1,244 @@
+<%-include("header") %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Apllication Form</title>
+    <link rel="stylesheet" href="/Css/task3.css">
+</head>
+<body>
+    <h1>Job Application Form</h1>
+    <br>
+    <form action="/" id="form_JobApp" method="get">
+        <fieldset id="basicDiv">
+            <legend>Basic Details</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="fName">First Name</label>
+                        <input type="text" id="fName" name="firstName" class="valString">
+                        <small class="error">Enter valid First Name</small>
+                    </td>
+                    <td>
+                        <label for="lName">Last Name</label>
+                        <input type="text" id="lName" name="lastName" class="valString">
+                        <small class="error">Enter valid Last Name</small>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="designation">Designation</label>
+                        <input type="text" id="designation" name="designation" class="valString">
+                        <small class="error">Enter valid Designation</small>
+                    </td>
+                    <td>
+                        <label for="address1">Address1</label>
+                        <textarea name="address1" id="address1" rows="1" cols="25"></textarea>
+                        <small class="error">Enter valid Address</small>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">E-mail</label>
+                        <input type="text" id="email" name="email">
+                        <small class="error">Enter valid Email</small>
+                    </td>
+                    <td>
+                        <label for="address2">Address2</label>
+                        <textarea name="address2" id="address2" rows="1" cols="25"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phoneNum">Phone Number</label>
+                        <input type="text" id="phoneNum" name="phoneNumber" class="valPhoneN">
+                        <small class="error">Enter valid Phone Number</small>
+                    </td>
+                    <td>
+                        <label for="cityName">City</label>
+                        <input type="text" id="cityName" name="cityName" class="valString">
+                        <small class="error">Enter valid City Name</small>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="gender">Gender</label>
+                        <input type="radio" name="gender" value="Male">Male
+                        <input type="radio" name="gender" value="Female">Female
+                        <input type="radio" name="gender" value="Other" checked>Other
+                    </td>
+                    <td>
+                        <label for="stateName">State</label>
+                        <select name="stateNames" id="stateName">
+                            <option value="Gujarat" selected>Gujarat</option>
+                            <option value="Rajeshthan" >Rajeshthan</option>
+                            <option value="Maharastra" >Maharastra</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="pinCode">Pincode</label>
+                        <input type="text" id="pinCode" name="pinCode">
+                        <small class="error">Enter valid Pincode</small>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="relationshipDrop">Relationship Status</label>
+                        <select name="relationshipDrop" id="relationshipDrop">
+                            <option value="Unmarried">Unmarried</option>
+                            <option value="Married">Married</option>
+                            <option value="Divored">Divored</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="dob">Date Of Birth</label>
+                        <input type="date" name="dateOfBirth" id="dateOfBirth">
+                        <small class="error">Enter valid Date of Birth</small>
+                    </td>
+                </tr>
+            </table>
+    
+    
+        </fieldset>
+
+        <fieldset id="eduDetails">
+            <legend>Education Details</legend>
+            <table id="educationTbl">
+                <tr>
+                    <td colspan="2" style="border: none;"></td>
+                    <td id="addEdu" class="addDeleteCell" style="border: none;">+ Add Row</td>
+                    <td id="deleteEdu" class="addDeleteCell" style="border: none;">- Delete Row</td>
+                </tr>
+                <tr>
+                    <td>Course</td>
+                    <td>Passing Year</td>
+                    <td>University / Board</td>
+                    <td>Result</td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset id="compDetails">
+            <legend>Work Experience</legend>
+            <table id="compTbl">
+                <tr>
+                    <td colspan="3" style="border: none;"></td>
+                    <td id="addComp" class="addDeleteCell" colspan="2" style="border: none;">+ Add Row</td>
+                    <td id="deleteComp" class="addDeleteCell" colspan="2" style="border: none;">- Delete Row</td>
+                </tr>
+                <tr>
+                    <td>Company</td>
+                    <td>From Date</td>
+                    <td>To Date</td>
+                    <td>Annual Package</td>
+                    <td>Reason to leave</td>
+                    <td>Ref. Contact Number</td>
+                    <td>Ref. Contact Name</td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset id="languageKnown">
+            <legend>Language Known</legend>
+            <table id="langKnownTbl"></table>
+        </fieldset>
+
+        <fieldset id="techKnown">
+            <legend>Technology Known</legend>
+            <table id="techKnownTbl"></table>
+        </fieldset>
+        <fieldset id="referenceContact">
+            <legend>Reference Contact</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="refName1">Name</label>
+                        <input type="text" id="refName1" name="refName1">
+                        <small class="error">Enter valid Name</small>
+                    </td>
+                    <td>
+                        <label for="refContNum1">Contact Number</label>
+                        <input type="text" id="refContNum1" name="refContNum1">
+                        <small class="error">Enter valid Number</small>
+                    </td>
+                    <td>
+                        <label for="refRel1">Relation</label>
+                        <input type="text" id="refRel1" name="refRelation1">
+                        <small class="error">Enter valid Relation</small>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="refName2">Name</label>
+                        <input type="text" id="refName2" name="refName2">
+                        <small class="error">Enter valid First Name</small>
+                    </td>
+                    <td>
+                        <label for="refContNum2">Contact Number</label>
+                        <input type="text" id="refContNum2" name="refContNum2">
+                        <small class="error">Enter valid Number</small>
+                    </td>
+                    <td>
+                        <label for="refRel2">Relation</label>
+                        <input type="text" id="refRel2" name="refRelation2">
+                        <small class="error">Enter valid Number</small>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset id="peferences">
+            <legend>Peferences</legend>
+            <table>
+                <tr>
+                    <td rowspan="3">
+                        <label for="locations">Prefered City</label>
+                        <select name="peferedLoc" id="locations" multiple size="2" style="height: max-content;width:max-content;"> 
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Ahemdabad">Ahemdabad</option>
+                            <option value="Surat">Surat</option>
+                        </select>
+                        <small class="error">Atleast Select One value</small>
+                    </td>
+                    <td>
+                        <label for="noticePed">Notice Period (in month)</label>
+                        <input type="text" id="noticePed" name="noticePeriod">
+                        <small class="error">Enter valid Notice Period</small>
+                    </td>
+                    <td rowspan="3">
+                        <label for="departments">Departments</label>
+                        <select name="departmentName" id="departments">
+                            <option value="Development" selected>Development</option>
+                            <option value="Design">Design</option>
+                            <option value="Marketing">Marketing</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="exptCtc">Expected CTC</label>
+                        <input type="text" id="exptCtc" name="expactedCtc">
+                        <small class="error">Enter Valid CTC</small>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="currCtc">Current CTC</label>
+                        <input type="text" id="currCtc" name="currentCtc">
+                        <small class="error">Enter Valid CTC</small>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <div class="button-group">
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+    <script src="/Js/task3.js"></script>
+    <script src="/Js/task3_val.js"></script>
+</body>
+</html>

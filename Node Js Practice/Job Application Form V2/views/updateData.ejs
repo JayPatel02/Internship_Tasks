@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+
+<body>
+    <div style="display: flex;justify-content: space-around;">
+        <h1>Job form V2</h1>
+        <a href="/applicantsData" style="text-decoration: none;color: black;font-size: large;margin-top: 5vmin;">List of Data</a>
+    </div>
+
+    <div id="NavBar" style="display: flex;justify-content: space-around;margin: 3vmin;cursor: pointer;">
+        <a id="0" onclick="handleDisplay(this.id)">Basic Info</a>
+        <a id="1" onclick="handleDisplay(this.id)">Educations</a>
+        <a id="2" onclick="handleDisplay(this.id)">Work Experience</a>
+        <a id="3" onclick="handleDisplay(this.id)">Language Known</a>
+        <a id="4" onclick="handleDisplay(this.id)">Tech Known</a>
+        <a id="5" onclick="handleDisplay(this.id)">Reference Contacts</a>
+    </div>
+
+    <form id="jobForm">
+        <div id="basicDiv">
+            <fieldset>
+                <legend>Basic Details</legend>
+                <table style="width: 100%;" id="basicTbl">
+                    <tr>
+                        <td>
+                            <label for="fName">First Name</label>
+                            <input type="text" id="fName" name="firstName" class="valString"
+                                value="<%= basData.first_name %>">
+                        </td>
+                        <td>
+                            <label for="lName">Last Name</label>
+                            <input type="text" id="lName" name="lastName" class="valString"
+                                value="<%= basData.last_name %>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="designation">Designation</label>
+                            <input type="text" id="designation" name="designation" class="valString"
+                                value="<%= basData.designation %>">
+                        </td>
+                        <td>
+                            <label for="address1">Address1</label>
+                            <textarea name="address1" id="address1" rows="1"
+                                cols="25"><%= basData.address1 %></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email">E-mail</label>
+                            <input type="text" id="email" name="email" value="<%= basData.email %>">
+                        </td>
+                        <td>
+                            <label for="address2">Address2</label>
+                            <textarea name="address2" id="address2" rows="1"
+                                cols="25"><%= basData.address2 %></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="phoneNum">Phone Number</label>
+                            <input type="text" id="phoneNum" maxlength="10" name="phoneNumber" class="valPhNum"
+                                value="<%= basData.phone_number %>">
+                        </td>
+                        <td>
+                            <label for="cityName">City</label>
+                            <input type="text" id="cityName" name="cityName" class="valString"
+                                value="<%= basData.city %>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="GenderArea"></td>
+                        <td id="StateArea"></td>
+                        <td>
+                            <label for="pinCode">Pincode</label>
+                            <input type="text" id="pinCode" name="pinCode" maxlength="6" class="valDigits"
+                                value="<%= basData.pincode %>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="RelationshipArea"></td>
+                        <td>
+                            <label for="dob">Date Of Birth</label>
+                            <input type="date" name="dateOfBirth" id="dateOfBirth"
+                                value="<%= basData.date_of_birth.toISOString().split('T')[0]%>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">
+                            <% let locs=[] 
+                                basData.preferedCity1 !="" ? locs.push(basData.preferedCity1) : "" 
+                                basData.preferedCity2 !="" ? locs.push(basData.preferedCity2) : "" 
+                                basData.preferedCity3 !="" ? locs.push(basData.preferedCity3) : ""  
+                            %>
+                            <label for="locations">Prefered City</label>
+                            <select name="peferedLoc" id="locations" multiple size="2" style="height: max-content;width:max-content;" >
+                                <option value="Vadodara" <%= locs.includes("Vadodara") ? "selected" : "" %> >Vadodara</option>
+                                <option value="Ahmedabad" <%= locs.includes("Ahmedabad") ? "selected" : "" %> >Ahmedabad </option>
+                                <option value="Surat" <%= locs.includes("Surat") ? "selected" : "" %> >Surat</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label for="noticePed">Notice Period (in month)</label>
+                            <input type="text" id="noticePed" name="noticePeriod"
+                                value="<%= basData.notice_period == 0 ? "" : basData.notice_period %>">
+                        </td>
+                        <td id="DepartmentsArea" rowspan="3"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="exptCtc">Expected CTC</label>
+                            <input type="text" id="exptCtc" name="expactedCtc" class="valDigits"
+                                value="<%= basData.expected_ctc %>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="currCtc">Current CTC</label>
+                            <input type="text" id="currCtc" name="currentCtc" class="valDigits"
+                                value="<%= basData.current_ctc %>">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <button type="button" onclick="handleSave('basicDiv')"
+                style="display: flex;margin: 5px auto;padding: 1vmin;justify-content: center;width: 10vmin;">Save</button>
+        </div>
+
+        <div id="eduDiv" style="display: none;">
+            <fieldset>
+                <legend>Education Details</legend>
+                <table id="Edutbl" style="width: 100%;text-align: center;">
+                    <tr>
+                        <td colspan="3"></td>
+                        <td id="addEdu" style="cursor: pointer;">+ Add Row</td>
+                    </tr>
+                    <tr>
+                        <td>Course</td>
+                        <td>Passing Year</td>
+                        <td>University / Board</td>
+                        <td>Result</td>
+                    </tr>
+                </table>
+            </fieldset>
+            <button type="button" onclick="handleSave('eduDiv')"
+                style="display: flex;margin: 5px auto;padding: 1vmin;justify-content: center;width: 10vmin;">Save</button>
+        </div>
+
+        <div id="compDiv" style="display: none;">
+            <fieldset>
+                <legend>Company Details</legend>
+                <table id="Comptbl" style="width: 100%;text-align: center;">
+                    <td colspan="6"></td>
+                    <td id="addComp" style="cursor: pointer;">+ Add Row</td>
+                    </tr>
+                    <tr>
+                        <td>Company</td>
+                        <td>From Date</td>
+                        <td>To Date</td>
+                        <td>Annual Package</td>
+                        <td>Reason to leave</td>
+                        <td>Ref. Contact Number</td>
+                        <td>Ref. Contact Name</td>
+                    </tr>
+                </table>
+            </fieldset>
+            <button type="button" onclick="handleSave('compDiv')"
+                style="display: flex;margin: 5px auto;padding: 1vmin;justify-content: center;width: 10vmin;">Save</button>
+        </div>
+
+        <div id="langDiv" style="display: none;">
+            <fieldset>
+                <legend>Language Known</legend>
+                <table id="Langtbl" style="text-align: center;width: 50%;margin-left: 25%;"></table>
+            </fieldset>
+            <button type="button" onclick="handleSave('langDiv')"
+                style="display: flex;margin: 5px auto;padding: 1vmin;justify-content: center;width: 10vmin;">Save</button>
+        </div>
+
+        <div id="techDiv" style="display: none;">
+            <fieldset>
+                <legend>Technology Known</legend>
+                <table id="Techtbl" style="text-align: center;width: 50%;margin-left: 25%;"></table>
+            </fieldset>
+            <button type="button" onclick="handleSave('techDiv')"
+                style="display: flex;margin: 5px auto;padding: 1vmin;justify-content: center;width: 10vmin;">Save</button>
+        </div>
+
+        <div id="refDiv" style="display: none;">
+            <fieldset>
+                <legend>Reference Contact</legend>
+                <table style="width: 100%;" id="refTbl">
+                    <tr>
+                        <td>
+                            <label for="refName1">Name</label>
+                            <input type="text" id="refName1" name="reference[0][name]" class="valString"
+                                value="<%= refData.length > 0 ? refData[0].ref_name : "" %>">
+                        </td>
+                        <td>
+                            <label for="refContNum1">Contact Number</label>
+                            <input type="text" maxlength="10" id="refContNum1" name="reference[0][number]"
+                                class="valPhNum" value="<%= refData.length > 0 ? refData[0].ref_contact_number : "" %>">
+                        </td>
+                        <td>
+                            <label for="refRel1">Relation</label>
+                            <input type="text" id="refRel1" name="reference[0][relation]" class="valString"
+                                value="<%= refData.length > 0 ? refData[0].ref_relation : "" %>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="refName2">Name</label>
+                            <input type="text" id="refName2" name="reference[1][name]" class="valString"
+                                value="<%= refData.length > 1 ? refData[1].ref_name : "" %>">
+                        </td>
+                        <td>
+                            <label for="refContNum2">Contact Number</label>
+                            <input type="text" maxlength="10" id="refContNum2" name="reference[1][number]"
+                                class="valPhNum" value="<%= refData.length > 1 ? refData[1].ref_contact_number : "" %>">
+                        </td>
+                        <td>
+                            <label for="refRel2">Relation</label>
+                            <input type="text" id="refRel2" name="reference[1][relation]" class="valString"
+                                value="<%= refData.length > 1 ? refData[1].ref_relation : "" %>">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <button type="button" onclick="handleSave('refDiv')"
+                style="display: flex;margin: 5px auto;padding: 1vmin;justify-content: center;width: 10vmin;">Save</button>
+        </div>
+    </form>
+    <script>
+        const applicantId = <%- JSON.stringify(id) %>
+        const basicData = <%- JSON.stringify(basData) %>
+        const educationData = <%- JSON.stringify(eduData) %>
+        const companyData = <%- JSON.stringify(compData) %>
+        const languageData = <%- JSON.stringify(langData) %>
+        const technologyData = <%- JSON.stringify(techData) %>
+    </script>
+    <script src="/JS/preLoadCombo.js"></script>
+    <script src="/JS/script.js"></script>
+    <script src="/JS/validation.js"></script>
+    <script src="/JS/update.js"></script>
+</body>
+
+</html>

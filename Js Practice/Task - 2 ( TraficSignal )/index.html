@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trafic Signal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td colspan="2" rowspan="2" style="border-left: 0;border-top: 0;"></td>
+            <td colspan="3" rowspan="1" id="rBlocks">N</td>
+            <td colspan="2" rowspan="2" 
+            style="border-top: 0;border-right: 0;"></td>
+        </tr>
+        <tr>
+            <td id="northRed">R</td>
+            <td id="northGreen">G</td>
+            <td id="northYellow">Y</td>
+        </tr>
+        <tr>
+            <td rowspan="3" id="rBlocks">W</td>
+            <td id="westYellow">Y</td>
+            <td colspan="3" rowspan="3" id="rBlocks"></td>
+            <td id="eastRed">R</td>
+            <td rowspan="3" id="rBlocks">E</td>
+        </tr>
+        <tr>
+            <td id="westGreen">G</td>
+            <td id="eastGreen">G</td>
+        </tr>
+        <tr>
+            <td id="westRed">R</td>
+            <td id="eastYellow">Y</td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2"
+            style="border-left: 0; border-bottom:0;">
+            </td>
+            <td id="southYellow">Y</td>
+            <td id="southGreen">G</td>
+            <td id="southRed">R</td>
+            <td colspan="2" rowspan="2"
+            style="border-bottom: 0;border-right: 0;"></td>
+        </tr>
+        <tr>
+            <td colspan="3" id="rBlocks">S</td>
+        </tr>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

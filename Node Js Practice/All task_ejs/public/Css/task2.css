@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    background-color:rgb(212, 212, 212);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+table{
+    height: 90vmin;
+    width: 100vmin;
+    text-align: center;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-top: 3vmin;
+}
+td{
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+#rBlocks{
+    background-color: gray;
+}

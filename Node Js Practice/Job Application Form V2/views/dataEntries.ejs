@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div
+        style="display: flex;flex-direction: column;justify-content: center;margin: 5vmin auto;width: 90%;overflow-x: scroll;overflow-y: scroll;">
+        <div style="display: flex;justify-content: space-around;">
+            <h1 style="margin-left: 60vmin;">User's Data</h1>
+            <a href="/" style="text-decoration: none;color: black;font-size: large;margin-top: 5vmin;">Home</a>
+        </div>
+        <div style="height: 70vmin;">
+            <table style="width: 100%;table-layout: fixed;text-align: center;margin-top: 3vmin;">
+                <thead style="position: sticky;top:0;">
+                    <th>Full Name</th>
+                    <th>Designation</th>
+                    <th>Email</th>
+                    <th>City</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <% data.forEach(element=> { %>
+                        <tr>
+                            <td>
+                                <%= element.first_name %>
+                                    <%= element.last_name %>
+                            </td>
+                            <td>
+                                <%= element.designation %>
+                            </td>
+                            <td>
+                                <%= element.email %>
+                            </td>
+                            <td>
+                                <%= element.city %>
+                            </td>
+                            <td><a href="/viewData/<%= element.applicant_id %>" style="color: rgb(52, 129, 245);">View
+                                    Data</a></td>
+                            <td><a href="/updateData/<%= element.applicant_id %>"
+                                    style="color: rgb(18, 194, 18);">Update</a></td>
+                            <td><a href="/deleteData/<%= element.applicant_id %>"
+                                    style="color: rgb(255, 40, 40);">Delete</a></td>
+                        </tr>
+                        <% }); %>
+                </tbody>
+            </table>
+        </div>
+        <div id="pagination">
+            <a id="homePage">&lt;&lt;</a>
+            <a id="previousPage">&lt;</a>
+            <a id="disPage">1</a>
+            <a id="nextPage">&gt;</a>
+            <a id="lastPage">&gt;&gt;</a>
+        </div>
+    </div>
+
+    <script>
+        let currentPage = 1
+        
+        document.getElementById("homePage").addEventListener("click",(e)=>{
+            if(currentPage != 1 || currentPage == 1){
+                currentPage = 1
+                changePage(currentPage)
+                document.getElementById("disPage").innerText = currentPage
+            }
+        })
+        document.getElementById("previousPage")
+
+        function changePage(currPage){
+            let url = new URLSearchParams(window.location.search)
+            url.set("page",currPage)
+            window.location.href = `${window.location.pathname}?${url.toString()}`
+        }
+    </script>
+</body>
+</html>
